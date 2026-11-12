@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【公式】特定技能介護求人 | er株式会社（登録支援機関）</title>
+    <title>外国人材のお仕事相談・求人登録 | er株式会社（登録支援機関）</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -27,19 +27,32 @@
 </head>
 <body class="bg-gradient-to-b from-emerald-50/40 via-white to-slate-50 text-slate-800 antialiased">
 
-    <!-- 固定ヘッダー -->
+    <!-- 固定ヘッダー（言語切り替えプルダウン付き） -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-emerald-100 shadow-sm">
-        <div class="max-w-xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <span class="text-emerald-600 text-xl"><i class="fa-solid fa-building-user"></i></span>
+        <div class="max-w-xl mx-auto px-4 h-16 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5 shrink-0">
+                <span class="text-emerald-600 text-xl"><i class="fa-solid fa-handshake-angle"></i></span>
                 <div>
                     <span class="font-black text-slate-800 text-xs sm:text-sm tracking-tight block">er株式会社</span>
-                    <span class="text-[9px] text-slate-500 block leading-none">登録支援機関 / 介護特定技能求人</span>
+                    <span class="text-[9px] text-slate-500 block leading-none" data-i18n="header_sub">登録支援機関 / 外国人材支援</span>
                 </div>
             </div>
-            <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-md transition flex items-center gap-1">
-                <span>応募・相談 📝</span>
-            </a>
+
+            <!-- 言語切り替えドロップダウン -->
+            <div class="flex items-center gap-1.5">
+                <i class="fa-solid fa-globe text-emerald-600 text-xs"></i>
+                <select id="lang-select" onchange="changeLanguage(this.value)" class="text-xs bg-emerald-50 border border-emerald-200 text-slate-700 font-bold py-1.5 px-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm">
+                    <option value="ja">日本語</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="id">Indonesia</option>
+                    <option value="my">မြန်မာ</option>
+                    <option value="ne">नेपाली</option>
+                </select>
+                <!-- ヘッダー右ボタン（気軽な相談ニュアンス） -->
+                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] sm:text-xs font-bold px-3 py-2 rounded-full shadow transition shrink-0" data-i18n="header_btn">
+                    相談する 💬
+                </a>
+            </div>
         </div>
     </header>
 
@@ -49,43 +62,79 @@
         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-400/10 rounded-full blur-2xl"></div>
 
         <div class="max-w-md mx-auto relative z-10">
-            <!-- ターゲット指定 -->
-            <span class="bg-amber-400 text-slate-900 text-[10px] sm:text-xs font-black px-4 py-1.5 rounded-full inline-block mb-3 shadow-md tracking-wider">
-                【日本国内にいる方へ】特定技能者・実習修了者 歓迎！
+            <!-- ターゲットバッジ -->
+            <span class="bg-amber-400 text-slate-900 text-[10px] sm:text-xs font-black px-4 py-1.5 rounded-full inline-block mb-3 shadow-md tracking-wider" data-i18n="hero_badge">
+                【日本国内にいる方へ】特定技能・実習修了者 歓迎！
             </span>
             <h1 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug mb-3">
-                首都圏で介護特定技能のお仕事！<br>
-                <span class="text-amber-300">月給 230,000円〜</span>
+                <span data-i18n="hero_title_1">日本での転職・お仕事相談！</span><br>
+                <span class="text-amber-300" data-i18n="hero_title_2">介護・製造・飲食など様々なお仕事</span>
             </h1>
-            <p class="text-emerald-100 text-xs sm:text-sm leading-relaxed mb-5 opacity-90">
-                東京・千葉・埼玉・神奈川の優良施設。<br>
-                er株式会社が「引越・SIM・ビザ手続き」をすべて支援します！
+            <p class="text-emerald-100 text-xs sm:text-sm leading-relaxed mb-5 opacity-90" data-i18n="hero_desc">
+                東京・首都圏をはじめ全国の求人をご紹介。<br>
+                er株式会社が「引越・SIM契約・ビザ手続き」をすべて支援します！
             </p>
 
             <!-- 募集バナー画像 -->
             <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 mb-6 bg-slate-900">
-                <img src="banner2.png" alt="介護特定技能求人 er株式会社" class="w-full h-auto object-cover" onerror="this.src='Gemini_Generated_Image_jr3zbejr3zbejr3z (1).jpg'">
+                <img src="介護募集.png" alt="外国人材求人 er株式会社" class="w-full h-auto object-cover" onerror="this.src='Gemini_Generated_Image_jr3zbejr3zbejr3z (1).jpg'">
             </div>
 
-            <!-- 中ごろの応募ボタン -->
+            <!-- 中ごろのコンタクトボタン（ニュアンス：相談・エントリー） -->
             <div class="space-y-2 mt-4">
-                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95">
-                    <i class="fa-solid fa-paper-plane mr-1.5 text-lg"></i> かんたん1分応募・相談フォーム
+                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95" data-i18n="cta_mid_btn">
+                    <i class="fa-solid fa-comments mr-1.5 text-lg"></i> まずは希望を登録・相談してみる（無料）
                 </a>
-                <p class="text-[10px] text-amber-200">※名前と連絡先だけでOK！質問や転職相談だけでも大歓迎です。</p>
+                <p class="text-[10px] text-amber-200" data-i18n="cta_mid_sub">※気になることの質問だけでもOK！あなたの希望に合うお仕事を探します</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ★色々なお仕事ご紹介アピール（新規追加） -->
+    <section class="py-10 px-5 max-w-md mx-auto">
+        <div class="text-center mb-6">
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="jobs_badge">WIDE RANGE OF JOBS</span>
+            <h2 class="font-black text-slate-800 text-xl flex items-center justify-center gap-2">
+                <span class="text-emerald-500">✦</span> <span data-i18n="jobs_title">介護のほかにも、様々なお仕事をご紹介！</span>
+            </h2>
+            <p class="text-slate-500 text-xs mt-1" data-i18n="jobs_desc">
+                あなたの資格・経験・希望に合わせてぴったりのお仕事をご案内します。
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 text-center">
+            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="text-2xl text-emerald-600 mb-1"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_1_title">介護（かいご）</h3>
+                <p class="text-[10px] text-slate-500" data-i18n="job_1_desc">月給23万円〜・手当充実</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="text-2xl text-blue-600 mb-1"><i class="fa-solid fa-industry"></i></div>
+                <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_2_title">工場・製造（せいぞう）</h3>
+                <p class="text-[10px] text-slate-500" data-i18n="job_2_desc">食品加工・機械オペレーターなど</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="text-2xl text-amber-600 mb-1"><i class="fa-solid fa-utensils"></i></div>
+                <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_3_title">外食・飲食（いんしょく）</h3>
+                <p class="text-[10px] text-slate-500" data-i18n="job_3_desc">レストラン・調理補助・接客</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="text-2xl text-teal-600 mb-1"><i class="fa-solid fa-hotel"></i></div>
+                <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_4_title">宿泊・ホテル</h3>
+                <p class="text-[10px] text-slate-500" data-i18n="job_4_desc">フロント・客室管理など</p>
             </div>
         </div>
     </section>
 
     <!-- 3大安心サポート -->
-    <section class="py-12 px-5 max-w-md mx-auto">
-        <div class="text-center mb-8">
-            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest">er SUPPORT</span>
+    <section class="py-10 px-5 max-w-md mx-auto">
+        <div class="text-center mb-6">
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="support_badge">er SUPPORT</span>
             <h2 class="font-black text-slate-800 text-xl flex items-center justify-center gap-2">
-                <span class="text-emerald-500">★</span> er株式会社の3大移住・転職サポート
+                <span class="text-emerald-500">★</span> <span data-i18n="support_title">er株式会社の3大サポート</span>
             </h2>
-            <p class="text-slate-500 text-xs mt-1">
-                地方から首都圏への転職も、安心してスタートできます。
+            <p class="text-slate-500 text-xs mt-1" data-i18n="support_desc">
+                地方からの引っ越しやビザの変更も安心です。
             </p>
         </div>
 
@@ -95,11 +144,11 @@
                     <i class="fa-solid fa-truck-moving"></i>
                 </div>
                 <div>
-                    <h3 class="font-extrabold text-slate-800 text-sm mb-1">
+                    <h3 class="font-extrabold text-slate-800 text-sm mb-1" data-i18n="sup_1_title">
                         引越費用「半額（50%）会社負担」
                     </h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        現在地方にお住まいの方も、首都圏へ移る引っ越し費用を会社が半額負担。初期費用の心配を大幅に減らせます。
+                    <p class="text-slate-600 text-xs leading-relaxed" data-i18n="sup_1_desc">
+                        地方から首都圏へ移動する費用を会社が50%サポート。手元の初期費用が少なくても安心して新生活を始められます。
                     </p>
                 </div>
             </div>
@@ -109,11 +158,11 @@
                     <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
                 <div>
-                    <h3 class="font-extrabold text-slate-800 text-sm mb-1">
-                        SIM契約・住所変更・生活立ち上げ支援
+                    <h3 class="font-extrabold text-slate-800 text-sm mb-1" data-i18n="sup_2_title">
+                        SIM契約・住所変更・生活支援
                     </h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        スマホのSIM契約や役所での住所変更手続きも専門スタッフがフルサポート。新しい土地でも困りません。
+                    <p class="text-slate-600 text-xs leading-relaxed" data-i18n="sup_2_desc">
+                        日本でのスマホ契約（格安SIM）や市役所での住所変更など、分からないことはスタッフが一緒にお手伝いします。
                     </p>
                 </div>
             </div>
@@ -123,133 +172,129 @@
                     <i class="fa-solid fa-passport"></i>
                 </div>
                 <div>
-                    <h3 class="font-extrabold text-slate-800 text-sm mb-1">
-                        特定技能ビザ（在留資格）申請サポート
+                    <h3 class="font-extrabold text-slate-800 text-sm mb-1" data-i18n="sup_3_title">
+                        ビザ（特定技能）申請サポート
                     </h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        登録支援機関であるer株式会社が、特定技能への在留資格変更や更新書類の作成・申請手続きを責任を持って行います。
+                    <p class="text-slate-600 text-xs leading-relaxed" data-i18n="sup_3_desc">
+                        登録支援機関のer株式会社が、特定技能ビザへの切り替え手続きや必要書類をすべて丁寧にフォローします。
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ★募集PRショート動画セクション（案件PR仕様に修正） -->
+    <!-- 求人PRショート動画セクション -->
     <section class="py-12 px-4 bg-slate-900 text-white rounded-[2.5rem] shadow-inner max-w-xl mx-auto">
         <div class="text-center mb-6">
-            <span class="text-[10px] font-bold text-amber-300 bg-amber-400/15 border border-amber-400/25 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest">JOB MOVIE</span>
+            <span class="text-[10px] font-bold text-amber-300 bg-amber-400/15 border border-amber-400/25 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="movie_badge">JOB MOVIE</span>
             <h2 class="font-black text-xl flex items-center justify-center gap-2">
-                🎬 注目の求人案件PR動画をチェック！
+                🎬 <span data-i18n="movie_title">注目の求人案件PR動画</span>
             </h2>
-            <p class="text-slate-300 text-xs mt-1">
-                具体的な募集条件や施設の紹介動画です。左右スワイプで再生できます 👉
+            <p class="text-slate-300 text-xs mt-1" data-i18n="movie_desc">
+                実際の募集案件や施設のお仕事PR動画です。左右スワイプで再生できます 👉
             </p>
         </div>
         
         <!-- 横スクロールリールコンテナ -->
         <div class="flex gap-4 overflow-x-auto pb-6 pt-2 px-2 no-scrollbar snap-x snap-mandatory">
-            
-            <!-- PR動画 1: 介護全般.mp4 -->
             <div class="snap-center shrink-0 w-[220px] sm:w-[240px] rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-black aspect-[9/16] relative">
                 <video src="介護全般.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
                     対応していません
                 </video>
                 <div class="absolute bottom-2 left-2 right-2 pointer-events-none bg-black/70 backdrop-blur-md px-2 py-1.5 rounded-xl text-left text-white">
-                    <span class="text-[10px] sm:text-[11px] font-bold block truncate"><i class="fa-solid fa-bullhorn text-amber-400 mr-1"></i> 首都圏 介護特定技能PR</span>
+                    <span class="text-[10px] sm:text-[11px] font-bold block truncate" data-i18n="video_1_label">🎬 介護求人PRショート</span>
                 </div>
             </div>
 
-            <!-- PR動画 2: 港区介護単体.mp4 -->
             <div class="snap-center shrink-0 w-[220px] sm:w-[240px] rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-black aspect-[9/16] relative">
                 <video src="港区介護単体.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
                     対応していません
                 </video>
                 <div class="absolute bottom-2 left-2 right-2 pointer-events-none bg-black/70 backdrop-blur-md px-2 py-1.5 rounded-xl text-left text-white">
-                    <span class="text-[10px] sm:text-[11px] font-bold block truncate"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> 東京・港区エリア募集案件</span>
+                    <span class="text-[10px] sm:text-[11px] font-bold block truncate" data-i18n="video_2_label">📍 東京・港区エリア募集案件</span>
                 </div>
             </div>
 
-            <!-- PR動画 3: 締固単体.mp4 -->
             <div class="snap-center shrink-0 w-[220px] sm:w-[240px] rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-black aspect-[9/16] relative">
                 <video src="締固単体.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
                     対応していません
                 </video>
                 <div class="absolute bottom-2 left-2 right-2 pointer-events-none bg-black/70 backdrop-blur-md px-2 py-1.5 rounded-xl text-left text-white">
-                    <span class="text-[10px] sm:text-[11px] font-bold block truncate"><i class="fa-solid fa-star text-amber-400 mr-1"></i> 注目求人・待遇ピックアップ</span>
+                    <span class="text-[10px] sm:text-[11px] font-bold block truncate" data-i18n="video_3_label">✨ おすすめ求人ピックアップ</span>
                 </div>
             </div>
-
         </div>
-        <p class="text-slate-400 text-[11px] text-center mt-1">※気になる求人動画をタップしてご視聴ください</p>
+        <p class="text-slate-400 text-[11px] text-center mt-1" data-i18n="movie_tap_note">※タップして音声をONにできます</p>
     </section>
 
-    <!-- 募集要項 -->
+    <!-- 募集条件 -->
     <section class="py-10 px-5 bg-white border-y border-slate-200/60 shadow-sm">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-6">
-                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest">REQUIREMENTS</span>
+                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="req_badge">REQUIREMENTS</span>
                 <h2 class="font-black text-slate-800 text-lg flex items-center justify-center gap-2">
-                    ● 募集要項
+                    ● <span data-i18n="req_title">募集概要</span>
                 </h2>
             </div>
 
             <div class="space-y-3.5 text-xs sm:text-sm">
                 <div class="flex border-b border-slate-100 pb-3 gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0">募集職種</span>
+                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_job_h">ご紹介職種</span>
                     <div class="text-slate-800">
-                        <p class="font-bold">介護職（特定技能・日本国内限定）</p>
+                        <p class="font-bold" data-i18n="req_job_v">介護職（特定技能）、製造、飲食、宿泊など</p>
                     </div>
                 </div>
 
                 <div class="flex border-b border-slate-100 pb-3 gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0">給与</span>
+                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_pay_h">給与の目安</span>
                     <div class="text-slate-800 font-bold">
-                        <p class="text-emerald-700 text-base font-black">月給 230,000円〜</p>
+                        <p class="text-emerald-700 text-base font-black" data-i18n="req_pay_v">月給 230,000円〜（介護職例）</p>
+                        <p class="text-slate-500 text-[10px] mt-0.5 font-normal" data-i18n="req_pay_sub">※職種・勤務地・経験によって異なります</p>
                     </div>
                 </div>
 
                 <div class="flex border-b border-slate-100 pb-3 gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0">対象となる方</span>
+                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_target_h">対象となる方</span>
                     <div class="text-slate-800 space-y-1">
-                        <p class="font-bold">日本国内に在留している外国人材</p>
+                        <p class="font-bold" data-i18n="req_target_v1">日本国内に在留している外国人の方</p>
                         <ul class="list-disc list-inside text-slate-600 text-xs space-y-0.5">
-                            <li>特定技能（介護）をお持ちの方、または移行予定の方</li>
-                            <li>技能実習修了予定の方</li>
-                            <li>日本語レベル：N3以上（N4の方も相談OK！）</li>
+                            <li data-i18n="req_target_l1">特定技能ビザをお持ちの方、または変更予定の方</li>
+                            <li data-i18n="req_target_l2">技能実習修了・修了予定の方</li>
+                            <li data-i18n="req_target_l3">日本語レベル：N3目安（N4の方もぜひご相談ください）</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="flex gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0">勤務地</span>
+                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_area_h">勤務地</span>
                     <div class="text-slate-800 font-medium">
-                        <p>東京・千葉・埼玉・神奈川（首都圏エリア）</p>
+                        <p data-i18n="req_area_v">東京・千葉・埼玉・神奈川（首都圏）ほか全国</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 最下部の応募ボタン（CTA） -->
+    <!-- 最下部のコンタクトボタン（ニュアンス：求人登録・相談） -->
     <section class="py-12 px-5 max-w-md mx-auto text-center">
         <div class="bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 text-white p-6 rounded-3xl border border-emerald-100 shadow-2xl relative overflow-hidden">
             <div class="w-16 h-16 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-md">
-                <i class="fa-solid fa-comments"></i>
+                <i class="fa-solid fa-headset"></i>
             </div>
-            <h3 class="font-black text-white text-lg mb-2">首都圏での転職・就職をお手伝いします！</h3>
-            <p class="text-slate-200 text-xs mb-6 leading-relaxed max-w-xs mx-auto">
-                登録支援機関の er株式会社 がビザの手続きから引っ越しまで親身に対応します。質問だけでもお気軽にどうぞ！
+            <h3 class="font-black text-white text-lg mb-2" data-i18n="cta_btm_title">あなたにぴったりのお仕事を探します！</h3>
+            <p class="text-slate-200 text-xs mb-6 leading-relaxed max-w-xs mx-auto" data-i18n="cta_btm_desc">
+                転職の時期や希望給与、住みたい場所など、何でもお気軽にご相談ください。er株式会社がすべて無料でサポートします！
             </p>
             
             <div class="space-y-2.5">
-                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95">
-                    フォームから相談・応募する（無料） <i class="fa-solid fa-chevron-right ml-1"></i>
+                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95" data-i18n="cta_btm_btn">
+                    求職登録・お仕事相談フォームへ進む（1分） <i class="fa-solid fa-chevron-right ml-1"></i>
                 </a>
                 
                 <div class="flex justify-center gap-3 text-[10px] text-amber-200 mt-2">
-                    <span>✔ 引越費用 半額負担</span>
-                    <span>✔ SIM・住所変更支援</span>
-                    <span>✔ ビザ申請サポート</span>
+                    <span data-i18n="tag_1">✔ 引越し費用半額補助</span>
+                    <span data-i18n="tag_2">✔ SIM・住所変更支援</span>
+                    <span data-i18n="tag_3">✔ ビザ申請サポート</span>
                 </div>
             </div>
         </div>
@@ -259,10 +304,317 @@
     <footer class="py-8 text-center text-xs text-slate-400 border-t border-slate-200 bg-white px-4">
         <div class="max-w-md mx-auto space-y-1.5">
             <p class="font-black text-slate-700 text-sm">er株式会社（登録支援機関）</p>
-            <p class="text-[11px] text-slate-500">特定技能外国人就労支援 / 在留資格申請サポート</p>
+            <p class="text-[11px] text-slate-500" data-i18n="footer_sub">特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介</p>
             <p class="text-[10px] text-slate-400 pt-2">&copy; 2026 er株式会社 All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- 多言語切り替えスクリプト -->
+    <script>
+        const i18nData = {
+            ja: {
+                header_sub: "登録支援機関 / 外国人材支援",
+                header_btn: "相談する 💬",
+                hero_badge: "【日本国内にいる方へ】特定技能・実習修了者 歓迎！",
+                hero_title_1: "日本での転職・お仕事相談！",
+                hero_title_2: "介護・製造・飲食など様々なお仕事",
+                hero_desc: "東京・首都圏をはじめ全国の求人をご紹介。<br>er株式会社が「引越・SIM契約・ビザ手続き」をすべて支援します！",
+                cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> まずは希望を登録・相談してみる（無料）',
+                cta_mid_sub: "※気になることの質問だけでもOK！あなたの希望に合うお仕事を探します",
+                jobs_badge: "WIDE RANGE OF JOBS",
+                jobs_title: "介護のほかにも、様々なお仕事をご紹介！",
+                jobs_desc: "あなたの資格・経験・希望に合わせてぴったりのお仕事をご案内します。",
+                job_1_title: "介護（かいご）",
+                job_1_desc: "月給23万円〜・手当充実",
+                job_2_title: "工場・製造（せいぞう）",
+                job_2_desc: "食品加工・機械オペレーターなど",
+                job_3_title: "外食・飲食（いんしょく）",
+                job_3_desc: "レストラン・調理補助・接客",
+                job_4_title: "宿泊・ホテル",
+                job_4_desc: "フロント・客室管理など",
+                support_badge: "er SUPPORT",
+                support_title: "er株式会社の3大サポート",
+                support_desc: "地方からの引っ越しやビザの変更も安心です。",
+                sup_1_title: '引越費用「半額（50%）会社負担」',
+                sup_1_desc: "地方から首都圏へ移動する費用を会社が50%サポート。手元の初期費用が少なくても安心して新生活を始められます。",
+                sup_2_title: "SIM契約・住所変更・生活支援",
+                sup_2_desc: "日本でのスマホ契約（格安SIM）や市役所での住所変更など、分からないことはスタッフが一緒にお手伝いします。",
+                sup_3_title: "ビザ（特定技能）申請サポート",
+                sup_3_desc: "登録支援機関のer株式会社が、特定技能ビザへの切り替え手続きや必要書類をすべて丁寧にフォローします。",
+                movie_badge: "JOB MOVIE",
+                movie_title: "注目の求人案件PR動画",
+                movie_desc: "実際の募集案件や施設のお仕事PR動画です。左右スワイプで再生できます 👉",
+                video_1_label: "🎬 介護求人PRショート",
+                video_2_label: "📍 東京・港区エリア募集案件",
+                video_3_label: "✨ おすすめ求人ピックアップ",
+                movie_tap_note: "※タップして音声をONにできます",
+                req_badge: "REQUIREMENTS",
+                req_title: "募集概要",
+                req_job_h: "ご紹介職種",
+                req_job_v: "介護職（特定技能）、製造、飲食、宿泊など",
+                req_pay_h: "給与の目安",
+                req_pay_v: "月給 230,000円〜（介護職例）",
+                req_pay_sub: "※職種・勤務地・経験によって異なります",
+                req_target_h: "対象となる方",
+                req_target_v1: "日本国内に在留している外国人の方",
+                req_target_l1: "特定技能ビザをお持ちの方、または変更予定の方",
+                req_target_l2: "技能実習修了・修了予定の方",
+                req_target_l3: "日本語レベル：N3目安（N4の方もぜひご相談ください）",
+                req_area_h: "勤務地",
+                req_area_v: "東京・千葉・埼玉・神奈川（首都圏）ほか全国",
+                cta_btm_title: "あなたにぴったりのお仕事を探します！",
+                cta_btm_desc: "転職の時期や希望給与、住みたい場所など、何でもお気軽にご相談ください。er株式会社がすべて無料でサポートします！",
+                cta_btm_btn: '求職登録・お仕事相談フォームへ進む（1分） <i class="fa-solid fa-chevron-right ml-1"></i>',
+                tag_1: "✔ 引越し費用半額補助",
+                tag_2: "✔ SIM・住所変更支援",
+                tag_3: "✔ ビザ申請サポート",
+                footer_sub: "特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介"
+            },
+            vi: {
+                header_sub: "Cơ quan hỗ trợ đăng ký / er Co., Ltd.",
+                header_btn: "Tư vấn ngay 💬",
+                hero_badge: "Dành cho người nước ngoài tại Nhật! Chào đón TTS hoàn thành & Tokutei",
+                hero_title_1: "Tư vấn chuyển việc & tìm việc tại Nhật!",
+                hero_title_2: "Nhiều ngành nghề: Kaigo, Nhà xưởng, Ẩm thực...",
+                hero_desc: "Giới thiệu việc làm tại Tokyo và toàn quốc.<br>er Co., Ltd. hỗ trợ 100% chi phí chuyển nhà, SIM thẻ và xin visa!",
+                cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> Đăng ký tìm việc & Nhận tư vấn (Miễn phí)',
+                cta_mid_sub: "※Bạn có thể gửi câu hỏi hoặc thắc mắc. Chúng tôi sẽ tìm công việc phù hợp nhất!",
+                jobs_badge: "ĐA DẠNG NGÀNH NGHỀ",
+                jobs_title: "Ngoài Kaigo, chúng tôi còn có rất nhiều ngành nghề khác!",
+                jobs_desc: "Chúng tôi sẽ giới thiệu công việc phù hợp với bằng cấp, kinh nghiệm và mong muốn của bạn.",
+                job_1_title: "Điều dưỡng (Kaigo)",
+                job_1_desc: "Lương từ 230.000 yên/tháng",
+                job_2_title: "Nhà xưởng / Chế tạo",
+                job_2_desc: "Chế biến thực phẩm, vận hành máy...",
+                job_3_title: "Dịch vụ ăn uống / Nhà hàng",
+                job_3_desc: "Phụ bếp, nhà hàng, tiếp khách...",
+                job_4_title: "Khách sạn / Lưu trú",
+                job_4_desc: "Lễ tân, dọn phòng...",
+                support_badge: "HỖ TRỢ TỪ er",
+                support_title: "3 Hỗ trợ lớn từ er Co., Ltd.",
+                support_desc: "Yên tâm chuyển từ các tỉnh về khu vực Tokyo làm việc.",
+                sup_1_title: "Hỗ trợ 50% chi phí chuyển nhà!",
+                sup_1_desc: "Công ty hỗ trợ 50% chi phí di chuyển từ các tỉnh về Tokyo/thủ đô, giúp bạn giảm gánh nặng ban đầu.",
+                sup_2_title: "Hỗ trợ đăng ký SIM & Thủ tục địa chỉ",
+                sup_2_desc: "Nhân viên hướng dẫn tận tình việc đăng ký SIM điện thoại và làm thủ tục tại ủy ban quận/thị xã.",
+                sup_3_title: "Hỗ trợ xin visa (Kỹ năng đặc định)",
+                sup_3_desc: "er Co., Ltd. chuẩn bị toàn bộ hồ sơ và xin đổi visa Tokutei Ginou giúp bạn.",
+                movie_badge: "VIDEO VIỆC LÀM",
+                movie_title: "Xem video giới thiệu việc làm nổi bật",
+                movie_desc: "Video giới thiệu cơ sở và công việc thực tế. Vuốt sang trái/phải để xem 👉",
+                video_1_label: "🎬 Video giới thiệu Kaigo",
+                video_2_label: "📍 Tuyển dụng tại Minato-ku, Tokyo",
+                video_3_label: "✨ Việc làm nổi bật",
+                movie_tap_note: "※Chạm vào video để bật âm thanh",
+                req_badge: "THÔNG TIN TUYỂN DỤNG",
+                req_title: "Điều kiện tuyển dụng",
+                req_job_h: "Ngành nghề",
+                req_job_v: "Kaigo (Kỹ năng đặc định), Chế tạo, Nhà hàng, Khách sạn...",
+                req_pay_h: "Mức lương tham khảo",
+                req_pay_v: "Từ 230.000 yên/tháng (ví dụ ngành Kaigo)",
+                req_pay_sub: "※Tùy theo ngành nghề, khu vực và kinh nghiệm",
+                req_target_h: "Đối tượng",
+                req_target_v1: "Người nước ngoài đang sinh sống tại Nhật Bản",
+                req_target_l1: "Người có visa Tokutei Ginou hoặc dự định chuyển sang",
+                req_target_l2: "TTS sắp hoàn thành chương trình",
+                req_target_l3: "Trình độ tiếng Nhật: N3 (N4 vẫn có thể trao đổi)",
+                req_area_h: "Nơi làm việc",
+                req_area_v: "Tokyo, Chiba, Saitama, Kanagawa và toàn quốc",
+                cta_btm_title: "Chúng tôi sẽ tìm công việc phù hợp nhất cho bạn!",
+                cta_btm_desc: "Hãy liên hệ thoải mái về thời gian chuyển việc, mức lương hay địa điểm mong muốn. er Co., Ltd. hỗ trợ hoàn toàn miễn phí!",
+                cta_btm_btn: 'Mở mẫu đăng ký tìm việc (1 phút) <i class="fa-solid fa-chevron-right ml-1"></i>',
+                tag_1: "✔ Trợ cấp 50% chuyển nhà",
+                tag_2: "✔ Hỗ trợ SIM & Đăng ký địa chỉ",
+                tag_3: "✔ Hỗ trợ xin Visa",
+                footer_sub: "Cơ quan hỗ trợ đăng ký / Xin visa / Giới thiệu việc làm"
+            },
+            id: {
+                header_sub: "Lembaga Pendukung Terdaftar / er Co., Ltd.",
+                header_btn: "Konsultasi 💬",
+                hero_badge: "Untuk yang sudah di Jepang! Pemegang Tokutei & Eks-Kenshuusei",
+                hero_title_1: "Konsultasi Kerja & Pindah Kerja di Jepang!",
+                hero_title_2: "Banyak pilihan kerja: Kaigo, Manufaktur, Restoran...",
+                hero_desc: "Informasi lowongan kerja di Tokyo dan seluruh Jepang.<br>er Co., Ltd. membantu biaya pindahan, SIM card, dan proses visa!",
+                cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> Daftar & Konsultasi Lowongan (Gratis)',
+                cta_mid_sub: "※Tanya-tanya saja juga boleh! Kami carikan kerjaan yang cocok untuk Anda.",
+                jobs_badge: "PILIHAN PEKERJAAN",
+                jobs_title: "Selain Kaigo, Masih Banyak Pekerjaan Lain!",
+                jobs_desc: "Kami perkenalkan pekerjaan yang sesuai dengan kualifikasi, pengalaman, dan keinginan Anda.",
+                job_1_title: "Kaigo (Perawat Lansia)",
+                job_1_desc: "Gaji mulai 230.000 yen/bulan",
+                job_2_title: "Pabrik / Manufaktur",
+                job_2_desc: "Pengolahan makanan, operator mesin, dll.",
+                job_3_title: "Restoran / Makanan",
+                job_3_desc: "Dapur, pelayan restoran, dll.",
+                job_4_title: "Perhotelan / Akomodasi",
+                job_4_desc: "Resepsionis, tata graha, dll.",
+                support_badge: "BANTUAN DARI er",
+                support_title: "3 Bantuan Utama dari er Co., Ltd.",
+                support_desc: "Pindah dari daerah ke Tokyo jadi mudah dan tenang.",
+                sup_1_title: "Biaya Pindahan Ditanggung 50%!",
+                sup_1_desc: "Perusahaan menanggung setengah biaya relokasi Anda dari daerah ke area Tokyo.",
+                sup_2_title: "Bantuan SIM Card & Administrasi Alamat",
+                sup_2_desc: "Staf kami akan mendampingi proses kontrak SIM card dan pelaporan alamat di balai kota.",
+                sup_3_title: "Bantuan Pengurusan Visa (Tokutei Ginou)",
+                sup_3_desc: "er Co., Ltd. mengurus seluruh dokumen dan aplikasi izin tinggal visa untuk Anda.",
+                movie_badge: "VIDEO LOWONGAN",
+                movie_title: "Lihat Video Pengenalan Tempat Kerja",
+                movie_desc: "Video penjelasan lowongan kerja nyata. Geser ke samping untuk melihat 👉",
+                video_1_label: "🎬 Video Pekerjaan Kaigo",
+                video_2_label: "📍 Lowongan Minato-ku, Tokyo",
+                video_3_label: "✨ Lowongan Unggulan",
+                movie_tap_note: "※Ketuk video untuk menyalakan suara",
+                req_badge: "PERSYARATAN",
+                req_title: "Ringkasan Lowongan",
+                req_job_h: "Jenis Kerja",
+                req_job_v: "Kaigo (Tokutei Ginou), Manufaktur, Restoran, Hotel, dll.",
+                req_pay_h: "Standar Gaji",
+                req_pay_v: "Mulai 230.000 yen/bulan (Contoh Kaigo)",
+                req_pay_sub: "※Bervariasi tergantung jenis pekerjaan, lokasi, dan pengalaman",
+                req_target_h: "Kriteria",
+                req_target_v1: "Warga negara asing yang sedang berada di Jepang",
+                req_target_l1: "Pemegang visa Tokutei Ginou atau yang akan beralih",
+                req_target_l2: "Pemagang yang akan/telah selesai masa magang",
+                req_target_l3: "Kemampuan Bahasa: N3 (N4 bisa dikonsultasikan)",
+                req_area_h: "Lokasi Kerja",
+                req_area_v: "Tokyo, Chiba, Saitama, Kanagawa, dan seluruh Jepang",
+                cta_btm_title: "Kami Bantu Carikan Pekerjaan Terbaik untuk Anda!",
+                cta_btm_desc: "Jangan ragu konsultasikan waktu kepindahan, gaji, atau lokasi yang diinginkan. Gratis didukung er Co., Ltd.!",
+                cta_btm_btn: 'Buka Formulir Pendaftaran Kerja (1 Menit) <i class="fa-solid fa-chevron-right ml-1"></i>',
+                tag_1: "✔ Subsidi Pindahan 50%",
+                tag_2: "✔ Bantuan SIM Card & Alamat",
+                tag_3: "✔ Bantuan Pengajuan Visa",
+                footer_sub: "Lembaga Pendukung Terdaftar / Pengurusan Visa / Penyaluran Tenaga Kerja"
+            },
+            my: {
+                header_sub: "မှတ်ပုံတင်ထားသော အထောက်အကူပြုအဖွဲ့အစည်း / er Co., Ltd.",
+                header_btn: "တိုင်ပင်ရန် 💬",
+                hero_badge: "ဂျပန်နိုင်ငံရောက်ရှိနေသူများအတွက် (ကျွမ်းကျင်လုပ်သားနှင့် သင်တန်းသားဟောင်းများ)",
+                hero_title_1: "ဂျပန်တွင် အလုပ်ပြောင်းခြင်းနှင့် အလုပ်အကိုင် အကြံပေးခြင်း!",
+                hero_title_2: "ဘိုးဘွားရိပ်သာ၊ စက်ရုံ၊ စားသောက်ဆိုင် စသည့် အလုပ်မျိုးစုံ",
+                hero_desc: "တိုကျိုမြို့တော်နှင့် ဂျပန်တစ်ဝှမ်းရှိ အလုပ်များကို မိတ်ဆက်ပေးပါသည်။<br>er Co., Ltd. မှ အိမ်ပြောင်းစရိတ်၊ SIM ကတ်နှင့် ဗီဇာလျှောက်ထားမှုကို အပြည့်အဝ ကူညီပေးပါမည်!",
+                cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> အလုပ်မှတ်ပုံတင်ခြင်းနှင့် အခမဲ့တိုင်ပင်ခြင်း',
+                cta_mid_sub: "※မေးခွန်းများမေးရုံသာလည်း ရပါသည်။ သင့်စိတ်ကြိုက် အလုပ်များကို ရှာဖွေပေးပါမည်။",
+                jobs_badge: "အလုပ်အကိုင်မျိုးစုံ",
+                jobs_title: "ဘိုးဘွားရိပ်သာအပြင် အခြားအလုပ်များစွာကိုလည်း မိတ်ဆက်ပေးပါသည်!",
+                jobs_desc: "သင့်အရည်အချင်း၊ အတွေ့အကြုံနှင့် စိတ်ကြိုက်အခြေအနေများနှင့် ကိုက်ညီသော အလုပ်များကို လမ်းညွှန်ပေးပါမည်။",
+                job_1_title: "ဘိုးဘွားရိပ်သာ (Kaigo)",
+                job_1_desc: "လစာ ယန်း ၂၃၀,၀၀၀ မှ စတင်",
+                job_2_title: "စက်ရုံ / ထုတ်လုပ်ရေး",
+                job_2_desc: "အစားအစာထုတ်လုပ်ခြင်း၊ စက်ယန္တရားများ စသည်",
+                job_3_title: "စားသောက်ဆိုင် / အစားအစာဝန်ဆောင်မှု",
+                job_3_desc: "မီးဖိုချောင်၊ စားသောက်ဆိုင်ဝန်ဆောင်မှု",
+                job_4_title: "ဟိုတယ် / တည်းခိုခန်း",
+                job_4_desc: "ဧည့်ကြို၊ အခန်းထိန်းသိမ်းရေး စသည်",
+                support_badge: "er ၏ အကူအညီများ",
+                support_title: "er Co., Ltd. ၏ အဓိက အကူအညီ ၃ ခု",
+                support_desc: "နယ်မြို့များမှ တိုကျိုသို့ ပြောင်းရွှေ့အလုပ်လုပ်ကိုင်ခြင်းအတွက် စိတ်ချနိုင်ပါသည်။",
+                sup_1_title: "အိမ်ပြောင်းစရိတ် ကုမ္ပဏီမှ ၅၀% ထောက်ပံ့ပေးခြင်း",
+                sup_1_desc: "နယ်မှ တိုကျိုသို့ ပြောင်းရွှေ့စရိတ်ကို ကုမ္ပဏီက ထက်ဝက်ကျခံပေးသဖြင့် ကုန်ကျစရိတ် သက်သာစေပါသည်။",
+                sup_2_title: "SIM ကတ်နှင့် လိပ်စာပြောင်းလဲခြင်း အကူအညီ",
+                sup_2_desc: "SIM ကတ်လျှောက်ထားခြင်းနှင့် မြို့နယ်ရုံးများတွင် လိပ်စာတင်ခြင်းများကို တာဝန်ရှိသူများက ကူညီပေးပါမည်။",
+                sup_3_title: "သတ်မှတ်ကျွမ်းကျင်ဗီဇာ (SSW) လျှောက်ထားမှု အကူအညီ",
+                sup_3_desc: "er Co., Ltd. မှ ဗီဇာပြောင်းလဲခြင်းနှင့် သက်တမ်းတိုးခြင်း စာရွက်စာတမ်းများကို အစအဆုံး ကူညီဆောင်ရွက်ပေးပါသည်။",
+                movie_badge: "အလုပ်အကိုင် ဗီဒီယို",
+                movie_title: "စိတ်ဝင်စားဖွယ် အလုပ်အကိုင် ဗီဒီယိုတိုများ",
+                movie_desc: "အလုပ်နေရာများနှင့် လုပ်ငန်းခွင်အခြေအနေ ဗီဒီယိုများဖြစ်ပါသည်။ ဘေးသို့ရွှေ့၍ ကြည့်ရှုနိုင်ပါသည် 👉",
+                video_1_label: "🎬 Kaigo အလုပ်အကိုင် ဗီဒီယိုတို",
+                video_2_label: "📍 တိုကျို မီနာတိုခရိုင် အလုပ်အကိုင်",
+                video_3_label: "✨ ထူးခြားအလုပ်အကိုင်များ",
+                movie_tap_note: "※အသံဖွင့်ရန် ဗီဒီယိုကို နှိပ်ပါ",
+                req_badge: "လိုအပ်ချက်များ",
+                req_title: "ခေါ်ယူမှု အနှစ်ချုပ်",
+                req_job_h: "မိတ်ဆက်ပေးမည့်အလုပ်",
+                req_job_v: "ဘိုးဘွားရိပ်သာ (Kaigo)၊ စက်ရုံ၊ စားသောက်ဆိုင်၊ ဟိုတယ် စသည်",
+                req_pay_h: "ခန့်မှန်းလစာ",
+                req_pay_v: "လစာ ယန်း ၂၃၀,၀၀၀ မှ (Kaigo နမူနာ)",
+                req_pay_sub: "※အလုပ်အကိုင်၊ နေရာနှင့် အတွေ့အကြုံပေါ်မူတည်၍ ကွာခြားနိုင်ပါသည်",
+                req_target_h: "လျှောက်ထားနိုင်သူများ",
+                req_target_v1: "ဂျပန်နိုင်ငံအတွင်း နေထိုင်နေသော နိုင်ငံခြားသားများ",
+                req_target_l1: "သတ်မှတ်ကျွမ်းကျင်လုပ်သား ဗီဇာရှိသူ သို့မဟုတ် ပြောင်းလဲမည့်သူ",
+                req_target_l2: "ကျွမ်းကျင်သင်တန်းပြီးဆုံးသူ သို့မဟုတ် ပြီးဆုံးတော့မည့်သူ",
+                req_target_l3: "ဂျပန်စာအရည်အချင်း: N3 ဝန်းကျင် (N4 ရှိသူများလည်း တိုင်ပင်နိုင်ပါသည်)",
+                req_area_h: "အလုပ်နေရာ",
+                req_area_v: "တိုကျို၊ ချီဘား၊ ဆိုင်တားမား၊ ခါနာဂါဝါ နှင့် ဂျပန်တစ်ဝှမ်း",
+                cta_btm_title: "သင့်အတွက် အသင့်တော်ဆုံး အလုပ်ကို ရှာဖွေပေးပါမည်!",
+                cta_btm_desc: "အလုပ်ပြောင်းမည့်အချိန်၊ လစာနှင့် နေထိုင်လိုသောနေရာများကို အခမဲ့ တိုင်ပင်နိုင်ပါသည်။ er Co., Ltd. မှ ကူညီပါမည်။",
+                cta_btm_btn: 'အလုပ်လျှောက်ထားရန် ဖောင်ဖွင့်ပါ (၁ မိနစ်) <i class="fa-solid fa-chevron-right ml-1"></i>',
+                tag_1: "✔ အိမ်ပြောင်းစရိတ် ၅၀% ကူညီငွေ",
+                tag_2: "✔ SIM ကတ်နှင့် လိပ်စာပြောင်းအကူအညီ",
+                tag_3: "✔ ဗီဇာလျှောက်ထားမှု အထောက်အပံ့",
+                footer_sub: "မှတ်ပုံတင်ထားသော အထောက်အကူပြုအဖွဲ့အစည်း / ဗီဇာလျှောက်ထားမှု / အလုပ်အကိုင်ရှာဖွေရေး"
+            },
+            ne: {
+                header_sub: "दर्ता गरिएको सहयोग संस्था / er Co., Ltd.",
+                header_btn: "परामर्श 💬",
+                hero_badge: "जापानमा रहनुभएका विदेशीहरूका लागि (SSW र प्रशिक्षार्थीहरू स्वागत छ)",
+                hero_title_1: "जापानमा जागिर परिवर्तन र कामको परामर्श!",
+                hero_title_2: "केयरगिभर, फ्याक्ट्री, रेस्टुरेन्ट आदि विभिन्न कामहरू",
+                hero_desc: "टोकियो र जापानभरिका कामहरूको जानकारी उपलब्ध गराइन्छ।<br>er Co., Ltd. ले कोठा सर्न, SIM कार्ड र भिसा प्रक्रियामा पूर्ण सहयोग गर्दछ!",
+                cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> जागिर दर्ता र निःशुल्क परामर्श गर्नुहोस्',
+                cta_mid_sub: "※सोधपुछ मात्र गर्न पनि सकिन्छ! हामी तपाईंको इच्छा अनुसारको काम खोज्नेछौं।",
+                jobs_badge: "कामको विविधता",
+                jobs_title: "केयरगिभर (Kaigo) बाहेक अन्य धेरै कामहरू पनि उपलब्ध छन्!",
+                jobs_desc: "तपाईंको योग्यता, अनुभव र इच्छा अनुसार उपयुक्त कामको व्यवस्था गर्दछौं।",
+                job_1_title: "केयरगिभर (Kaigo)",
+                job_1_desc: "मासिक तलब २३०,००० येन बाट सुरु",
+                job_2_title: "कारखाना / उत्पादन",
+                job_2_desc: "खाना प्याकिङ, मेसिन सञ्चालन आदि",
+                job_3_title: "रेस्टुरेन्ट / खाना सेवा",
+                job_3_desc: "किचन, वेटर, ग्राहक सेवा",
+                job_4_title: "होटल / आतिथ्य",
+                job_4_desc: "फ्रन्ट डेस्क, रुम व्यवस्थापन आदि",
+                support_badge: "er को सहयोगहरू",
+                support_title: "er Co., Ltd. का ३ प्रमुख सहयोगहरू",
+                support_desc: "ग्रामीण क्षेत्रबाट टोकियो सरेर ढुक्कसँग काम गर्न सकिन्छ।",
+                sup_1_title: "कोठा सर्ने खर्च ५०% कम्पनीले बेहोर्ने!",
+                sup_1_desc: "अन्य क्षेत्रबाट टोकियो सर्दा लाग्ने खर्चको आधा कम्पनीले सहयोग गर्छ, जसले आर्थिक भार कम गर्छ।",
+                sup_2_title: "SIM कार्ड र ठेगाना दर्ता सहयोग",
+                sup_2_desc: "SIM कार्ड सम्झौता र सरकारी कार्यालयमा ठेगाना दर्ता गर्न हाम्रा कर्मचारीहरूले सघाउनेछन्।",
+                sup_3_title: "भिसा (SSW) आवेदन प्रक्रिया सहयोग",
+                sup_3_desc: "er Co., Ltd. ले तोकुतेई गिनौ (SSW) भिसा परिवर्तन र कागजात तयार गर्न पूर्ण मद्दत गर्दछ।",
+                movie_badge: "कामको भिडियो",
+                movie_title: "काम र कार्यस्थलको भिडियो हेर्नुहोस्",
+                movie_desc: "वास्तविक काम र सुविधाको जानकारी भिडियो। दायाँ/बायाँ सारेर हेर्नुहोस् 👉",
+                video_1_label: "🎬 Kaigo कामको भिडियो",
+                video_2_label: "📍 टोकियो मिनातो-कु भर्ना",
+                video_3_label: "✨ मुख्य कामहरूको जानकारी",
+                movie_tap_note: "※आवाज खोल्न भिडियोमा ट्याप गर्नुहोस्",
+                req_badge: "आवश्यकताहरू",
+                req_title: "भर्ना विवरण",
+                req_job_h: "कामका क्षेत्रहरू",
+                req_job_v: "केयरगिभर (Kaigo), फ्याक्ट्री, रेस्टुरेन्ट, होटल आदि",
+                req_pay_h: "अनुमानित तलब",
+                req_pay_v: "मासिक २३०,००० येन बाट (Kaigo उदाहरण)",
+                req_pay_sub: "※कामको प्रकार, स्थान र अनुभव अनुसार फरक हुन सक्छ",
+                req_target_h: "योग्य उम्मेदवार",
+                req_target_v1: "जापानमा बसोबास गरिरहेका विदेशी नागरिकहरू",
+                req_target_l1: "SSW भिसा भएका वा परिवर्तन गर्न चाहनेहरू",
+                req_target_l2: "प्रशिक्षार्थी (Trainee) पूरा गरेका वा गर्न लागेकाहरू",
+                req_target_l3: "जापानी भाषा: N3 सरह (N4 भएकाहरूले पनि सम्पर्क गर्न सक्नुहुन्छ)",
+                req_area_h: "कार्यस्थल",
+                req_area_v: "टोकियो, चिबा, साइतामा, कानागावा र जापानभरि",
+                cta_btm_title: "हामी तपाईंको लागि उपयुक्त काम खोजिदिनेछौं!",
+                cta_btm_desc: "काम परिवर्तन गर्ने समय, तलब वा ठाउँको बारेमा निसंकोच सल्लाह लिनुहोस्। er Co., Ltd. को सम्पूर्ण सेवा निःशुल्क छ!",
+                cta_btm_btn: 'फारम भरेर सम्पर्क गर्नुहोस् (१ मिनेट) <i class="fa-solid fa-chevron-right ml-1"></i>',
+                tag_1: "✔ कोठा सर्ने ५०% सहयोग",
+                tag_2: "✔ SIM र ठेगाना दर्ता सहयोग",
+                tag_3: "✔ भिसा आवेदन सहयोग",
+                footer_sub: "दर्ता गरिएको सहयोग संस्था / भिसा आवेदन / रोजगार परामर्श"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const data = i18nData[lang] || i18nData.ja;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (data[key]) {
+                    el.innerHTML = data[key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+    </script>
 
 </body>
 </html>
