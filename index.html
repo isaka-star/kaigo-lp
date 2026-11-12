@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首都圏（東京エリア）介護のお仕事 | 技能実習修了者歓迎・移住サポート</title>
+    <title>首都圏介護のお仕事 | 介護特定技能（国内限定）</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; }
+        /* 横スクロールバーの非表示（スマホ操作をなめらかに） */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -22,152 +25,164 @@
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
         <div class="max-w-xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <span class="text-indigo-600 text-xl"><i class="fa-solid fa-city"></i></span>
-                <span class="font-black text-slate-800 text-xs sm:text-sm tracking-tight">首都圏（しゅとけん）介護のお仕事</span>
+                <span class="text-indigo-600 text-xl"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                <span class="font-black text-slate-800 text-xs sm:text-sm tracking-tight">介護特定技能（国内限定）求人</span>
             </div>
-            <!-- ★GoogleフォームURL反映済み（1箇所目） -->
             <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-md transition flex items-center gap-1">
-                <span>応募（おうぼ）</span> <i class="fa-solid fa-paper-plane text-xs"></i>
+                <span>応募する</span> <i class="fa-solid fa-paper-plane text-xs"></i>
             </a>
         </div>
     </header>
 
     <!-- ヒーローセクション（ファーストビュー） -->
-    <section class="pt-24 pb-10 px-5 bg-gradient-to-b from-indigo-900 via-indigo-800 to-slate-900 text-white text-center rounded-b-[2.5rem] shadow-xl relative overflow-hidden">
+    <section class="pt-24 pb-8 px-5 bg-gradient-to-b from-indigo-900 via-indigo-800 to-slate-900 text-white text-center rounded-b-[2.5rem] shadow-xl relative overflow-hidden">
         <div class="max-w-md mx-auto relative z-10">
             <span class="bg-amber-400 text-slate-900 text-xs font-black px-3.5 py-1 rounded-full inline-block mb-3 shadow-sm">
-                技能実習（ぎのうじっしゅう）が終わる方へ
+                日本国内にいる方へ（特定技能・技能実習修了者）
             </span>
             <h1 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug mb-3">
-                憧（あこが）れの首都圏（東京エリア）で<br>新（あたら）しいスタート！
+                介護特定技能でお仕事！<br>
+                <span class="text-amber-300">月給 230,000円〜</span>
             </h1>
-            <p class="text-indigo-100 text-xs sm:text-sm leading-relaxed mb-6">
-                地方（ちほう）から東京・首都圏で働きたい方を全力で応援します。不安な引っ越しや手続きも心配いりません！
+            <p class="text-indigo-100 text-xs sm:text-sm leading-relaxed mb-5">
+                東京・千葉・埼玉・神奈川の施設で活躍できます。<br>地方から首都圏への移住をフルサポート！
             </p>
 
-            <!-- 3大無料・半額サポートのカード -->
-            <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-left space-y-3 text-xs mb-6 shadow-inner">
+            <!-- 募集バナー画像 -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white/20 mb-6 bg-slate-800">
+                <img src="banner.jpg" alt="介護特定技能 募集バナー" class="w-full h-auto object-cover" onerror="this.style.display='none'">
+            </div>
+
+            <!-- 3大安心サポート -->
+            <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-left space-y-2.5 text-xs mb-6 shadow-inner">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold shrink-0">1</div>
+                    <span class="w-6 h-6 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold text-xs shrink-0">✔</span>
                     <div>
-                        <strong class="text-amber-300 text-sm block">引っ越し費用（ひよう）を半分負担！</strong>
-                        <span class="text-slate-200">いま住んでいる場所から首都圏への引っ越し代をサポート</span>
+                        <strong class="text-amber-300 block text-xs sm:text-sm">引越費用 半額負担！</strong>
+                        <span class="text-slate-200 text-[11px]">地方から首都圏への移動費用を会社が50%サポート</span>
                     </div>
                 </div>
                 <div class="border-t border-white/10 pt-2 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold shrink-0">2</div>
+                    <span class="w-6 h-6 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold text-xs shrink-0">✔</span>
                     <div>
-                        <strong class="text-amber-300 text-sm block">SIMカード契約（けいやく）をサポート！</strong>
-                        <span class="text-slate-200">日本でのスマホ手続きも一緒に行うので安心</span>
+                        <strong class="text-amber-300 block text-xs sm:text-sm">SIM契約・住所変更支援！</strong>
+                        <span class="text-slate-200 text-[11px]">新生活のスマホ手続きや役所の手続きも安心</span>
                     </div>
                 </div>
                 <div class="border-t border-white/10 pt-2 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold shrink-0">3</div>
+                    <span class="w-6 h-6 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold text-xs shrink-0">✔</span>
                     <div>
-                        <strong class="text-amber-300 text-sm block">特定技能（ビザ）申請を完全サポート！</strong>
-                        <span class="text-slate-200">在留資格（ざいりゅうしかく）の手続きを会社が手伝います</span>
+                        <strong class="text-amber-300 block text-xs sm:text-sm">ビザ（在留資格）申請サポート！</strong>
+                        <span class="text-slate-200 text-[11px]">特定技能ビザへの切り替え手続きを全面支援</span>
                     </div>
                 </div>
             </div>
 
-            <!-- ★GoogleフォームURL反映済み（2箇所目） -->
             <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="block w-full py-4 bg-amber-400 hover:bg-amber-300 text-slate-900 font-black rounded-2xl shadow-lg transition text-base text-center transform active:scale-95">
                 <i class="fa-solid fa-pen-to-square mr-1"></i> かんたん応募フォームへ進む
             </a>
         </div>
     </section>
 
-    <!-- なぜ安心？移住サポート詳細 -->
-    <section class="py-10 px-5 max-w-md mx-auto">
-        <h2 class="text-center font-black text-slate-800 text-lg mb-6 flex items-center justify-center gap-2">
-            <span class="text-indigo-600">●</span> 手厚（てあつ）い3つの安心サポート
+    <!-- ★複数リール動画セクション（左右スワイプ対応） -->
+    <section class="py-10 px-4 max-w-xl mx-auto text-center">
+        <h2 class="font-black text-slate-800 text-lg mb-2 flex items-center justify-center gap-2">
+            <span class="text-indigo-600">●</span> 職場の雰囲気をリール動画で見る
         </h2>
-
-        <div class="space-y-4">
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex gap-4 items-start">
-                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-truck-ramp-box"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-800 text-sm mb-1">引っ越し代を50%会社が払います</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        地方（ちほう）から東京エリアへの移動はお金がかかります。引っ越し費用の半分（50%）を会社が負担します！
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex gap-4 items-start">
-                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-sim-card"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-800 text-sm mb-1">スマホSIM契約もお手伝い</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        新生活で大切なスマホのSIMカード手続き。契約のサポートをするので、すぐに連絡が使えるようになります。
-                    </p>
+        <p class="text-slate-600 text-xs mb-4">
+            左右にスワイプして複数の動画をチェックできます 👉
+        </p>
+        
+        <!-- 横スクロールコンテナ -->
+        <div class="flex gap-4 overflow-x-auto pb-4 pt-2 px-2 no-scrollbar snap-x snap-mandatory">
+            
+            <!-- 動画 1: 介護全般 -->
+            <div class="snap-center shrink-0 w-[240px] rounded-3xl overflow-hidden shadow-xl border-2 border-slate-800 bg-black aspect-[9/16] relative">
+                <video src="介護全般.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
+                    対応していません
+                </video>
+                <div class="absolute bottom-2 left-2 right-2 pointer-events-none bg-black/60 backdrop-blur-sm px-2 py-1.5 rounded-lg text-left text-white">
+                    <span class="text-[11px] font-bold block truncate">🎬 介護のお仕事全般</span>
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex gap-4 items-start">
-                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-id-card"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-800 text-sm mb-1">在留資格（ビザ）の変更・申請</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">
-                        技能実習から「特定技能1号」などへの切り替え手続き。専門スタッフがしっかりサポートします。
-                    </p>
+            <!-- 動画 2: 港区介護単体 -->
+            <div class="snap-center shrink-0 w-[240px] rounded-3xl overflow-hidden shadow-xl border-2 border-slate-800 bg-black aspect-[9/16] relative">
+                <video src="港区介護単体.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
+                    対応していません
+                </video>
+                <div class="absolute bottom-2 left-2 right-2 pointer-events-none bg-black/60 backdrop-blur-sm px-2 py-1.5 rounded-lg text-left text-white">
+                    <span class="text-[11px] font-bold block truncate">🏢 施設・スタッフの様子</span>
                 </div>
             </div>
+
+            <!-- 動画 3: 締固単体 -->
+            <div class="snap-center shrink-0 w-[240px] rounded-3xl overflow-hidden shadow-xl border-2 border-slate-800 bg-black aspect-[9/16] relative">
+                <video src="締固単体.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
+                    対応していません
+                </video>
+                <div class="absolute bottom-2 left-2 right-2 pointer-events-none bg-black/60 backdrop-blur-sm px-2 py-1.5 rounded-lg text-left text-white">
+                    <span class="text-[11px] font-bold block truncate">✨ 先輩スタッフ紹介</span>
+                </div>
+            </div>
+
         </div>
+        <p class="text-slate-400 text-[11px] mt-1">※再生ボタンを押すと動画がスタートします</p>
     </section>
 
-    <!-- 募集要項 -->
+    <!-- 募集要項テーブル -->
     <section class="py-8 px-5 bg-white border-y border-slate-200/60">
         <div class="max-w-md mx-auto">
             <h2 class="text-center font-black text-slate-800 text-lg mb-6 flex items-center justify-center gap-2">
-                <span class="text-indigo-600">●</span> 募集要項（ぼしゅうようこう）
+                <span class="text-indigo-600">●</span> 募集条件
             </h2>
 
             <div class="space-y-3 text-xs">
                 <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
-                    <span class="font-bold text-indigo-700 block mb-0.5">【対象となる方】</span>
-                    <p class="text-slate-800 font-medium">技能実習（ぎのうじっしゅう）がもうすぐ終わる方</p>
-                    <p class="text-slate-500 text-[11px] mt-1">※地方に住んでいて、これから東京・首都圏で働きたい方大歓迎！</p>
+                    <span class="font-bold text-indigo-700 block mb-0.5">【職種・資格】</span>
+                    <p class="text-slate-800 font-bold">介護職（特定技能・国内限定）</p>
+                    <p class="text-slate-600 text-[11px] mt-0.5">日本語レベル：N3以上（※N4の方も相談OK！）</p>
                 </div>
 
                 <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
-                    <span class="font-bold text-indigo-700 block mb-0.5">【仕事内容】</span>
-                    <p class="text-slate-700">介護施設（かいごしせつ）での利用者のサポート（食事・お風呂・移動の助けなど）</p>
+                    <span class="font-bold text-indigo-700 block mb-0.5">【給与】</span>
+                    <p class="text-slate-800 font-bold text-sm text-emerald-700">月給 230,000円〜</p>
                 </div>
 
                 <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
                     <span class="font-bold text-indigo-700 block mb-0.5">【勤務地】</span>
-                    <p class="text-slate-700">首都圏エリア（東京都、神奈川県、埼玉県、千葉県など）</p>
+                    <p class="text-slate-700 font-medium">東京・千葉・埼玉・神奈川（首都圏エリア）</p>
+                </div>
+
+                <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
+                    <span class="font-bold text-indigo-700 block mb-0.5">【移住・生活支援】</span>
+                    <ul class="list-disc list-inside text-slate-700 space-y-0.5 text-[11px]">
+                        <li>引越費用 半額負担</li>
+                        <li>SIMカード契約・住所変更手続き支援</li>
+                        <li>在留資格（ビザ）申請サポート</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- フッター前CTA -->
+    <!-- エントリーCTA -->
     <section class="py-12 px-5 max-w-md mx-auto text-center">
         <div class="bg-gradient-to-br from-indigo-50 to-slate-100 p-6 rounded-3xl border border-indigo-100 shadow-sm">
-            <h3 class="font-black text-slate-800 text-base mb-2">首都圏（東京）で新生活を始めよう！</h3>
+            <h3 class="font-black text-slate-800 text-base mb-2">まずは相談・質問だけでもOK！</h3>
             <p class="text-slate-600 text-xs mb-6 leading-relaxed">
-                まずは「相談（そうだん）」だけでもOKです！<br>名前と電話番号を入力して送信してください。
+                ビザの残り期間や現在の勤務地など、お気軽にご連絡ください。
             </p>
             
-            <!-- ★GoogleフォームURL反映済み（3箇所目） -->
             <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="block w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-2xl shadow-lg transition text-base text-center transform active:scale-95">
-                フォームで相談・応募する <i class="fa-solid fa-arrow-right ml-1"></i>
+                フォームから応募・相談する <i class="fa-solid fa-arrow-right ml-1"></i>
             </a>
         </div>
     </section>
 
     <!-- フッター -->
     <footer class="py-6 text-center text-[11px] text-slate-400 border-t border-slate-200 bg-white">
-        &copy; 2026 首都圏介護移住サポートチーム All Rights Reserved.
+        &copy; 2026 er株式会社 登録支援機関 All Rights Reserved.
     </footer>
-
 </body>
 </html>
