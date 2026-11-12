@@ -27,7 +27,7 @@
 </head>
 <body class="bg-gradient-to-b from-emerald-50/40 via-white to-slate-50 text-slate-800 antialiased">
 
-    <!-- 固定ヘッダー（言語切り替えプルダウン付き） -->
+    <!-- 固定ヘッダー -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-emerald-100 shadow-sm">
         <div class="max-w-xl mx-auto px-4 h-16 flex items-center justify-between gap-2">
             <div class="flex items-center gap-1.5 shrink-0">
@@ -48,7 +48,6 @@
                     <option value="my">မြန်မာ</option>
                     <option value="ne">नेपाली</option>
                 </select>
-                <!-- ヘッダー右ボタン（気軽な相談ニュアンス） -->
                 <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] sm:text-xs font-bold px-3 py-2 rounded-full shadow transition shrink-0" data-i18n="header_btn">
                     相談する 💬
                 </a>
@@ -62,7 +61,6 @@
         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-400/10 rounded-full blur-2xl"></div>
 
         <div class="max-w-md mx-auto relative z-10">
-            <!-- ターゲットバッジ -->
             <span class="bg-amber-400 text-slate-900 text-[10px] sm:text-xs font-black px-4 py-1.5 rounded-full inline-block mb-3 shadow-md tracking-wider" data-i18n="hero_badge">
                 【日本国内にいる方へ】特定技能・実習修了者 歓迎！
             </span>
@@ -77,10 +75,10 @@
 
             <!-- 募集バナー画像 -->
             <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 mb-6 bg-slate-900">
-                <img src="介護募集.png" alt="外国人材求人 er株式会社" class="w-full h-auto object-cover" onerror="this.src='Gemini_Generated_Image_jr3zbejr3zbejr3z (1).jpg'">
+                <img src="banner2.png" alt="外国人材求人 er株式会社" class="w-full h-auto object-cover" onerror="this.src='Gemini_Generated_Image_jr3zbejr3zbejr3z (1).jpg'">
             </div>
 
-            <!-- 中ごろのコンタクトボタン（ニュアンス：相談・エントリー） -->
+            <!-- 中ごろのコンタクトボタン -->
             <div class="space-y-2 mt-4">
                 <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95" data-i18n="cta_mid_btn">
                     <i class="fa-solid fa-comments mr-1.5 text-lg"></i> まずは希望を登録・相談してみる（無料）
@@ -90,7 +88,7 @@
         </div>
     </section>
 
-    <!-- ★色々なお仕事ご紹介アピール（新規追加） -->
+    <!-- 色々なお仕事ご紹介セクション -->
     <section class="py-10 px-5 max-w-md mx-auto">
         <div class="text-center mb-6">
             <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="jobs_badge">WIDE RANGE OF JOBS</span>
@@ -195,7 +193,6 @@
             </p>
         </div>
         
-        <!-- 横スクロールリールコンテナ -->
         <div class="flex gap-4 overflow-x-auto pb-6 pt-2 px-2 no-scrollbar snap-x snap-mandatory">
             <div class="snap-center shrink-0 w-[220px] sm:w-[240px] rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-black aspect-[9/16] relative">
                 <video src="介護全般.mp4" playsinline controls preload="metadata" class="w-full h-full object-cover">
@@ -275,8 +272,39 @@
         </div>
     </section>
 
-    <!-- 最下部のコンタクトボタン（ニュアンス：求人登録・相談） -->
-    <section class="py-12 px-5 max-w-md mx-auto text-center">
+    <!-- ★【新規追加】外国人材をご検討されている企業様向けセクション -->
+    <section class="py-10 px-5 max-w-md mx-auto">
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 text-white p-6 rounded-3xl border border-slate-700 shadow-xl relative overflow-hidden">
+            <div class="flex items-center gap-2 mb-2">
+                <span class="bg-emerald-500 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">For Business</span>
+                <span class="text-xs font-bold text-slate-300">受け入れ企業様へ</span>
+            </div>
+            
+            <h3 class="font-black text-lg text-white mb-2 leading-snug" data-i18n="biz_title">
+                外国人材の採用をご検討されている企業様へ
+            </h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4" data-i18n="biz_desc">
+                外国人材（特定技能・技能実習修了者）の採用や受け入れ、登録支援機関としてのサポートをご検討されている企業様からのご連絡も心よりお待ちしております。<br>
+                求人票のご相談や面談の設定など、迅速に対応いたします。
+            </p>
+
+            <div class="bg-white/10 backdrop-blur-sm p-3.5 rounded-2xl border border-white/10 mb-4 text-xs space-y-1">
+                <p class="font-bold text-amber-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-info"></i> <span data-i18n="biz_note_head">お問い合わせ方法</span>
+                </p>
+                <p class="text-slate-200 text-[11px] leading-relaxed" data-i18n="biz_note_body">
+                    下記のフォームより、<strong>【応募備考欄（Notes）】に「企業名」「ご担当者様名」「採用検討の旨」</strong>をご記入の上、ご送信ください。担当者より折り返しご連絡いたします。
+                </p>
+            </div>
+
+            <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="block w-full py-3.5 bg-slate-100 hover:bg-white text-slate-900 font-black rounded-2xl shadow transition text-xs sm:text-sm text-center" data-i18n="biz_btn">
+                <i class="fa-solid fa-envelope mr-1.5"></i> 企業様向けお問い合わせ（フォーム備考欄へ）
+            </a>
+        </div>
+    </section>
+
+    <!-- 最下部のコンタクトボタン -->
+    <section class="py-10 px-5 max-w-md mx-auto text-center">
         <div class="bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 text-white p-6 rounded-3xl border border-emerald-100 shadow-2xl relative overflow-hidden">
             <div class="w-16 h-16 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-md">
                 <i class="fa-solid fa-headset"></i>
@@ -304,7 +332,7 @@
     <footer class="py-8 text-center text-xs text-slate-400 border-t border-slate-200 bg-white px-4">
         <div class="max-w-md mx-auto space-y-1.5">
             <p class="font-black text-slate-700 text-sm">er株式会社（登録支援機関）</p>
-            <p class="text-[11px] text-slate-500" data-i18n="footer_sub">特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介</p>
+            <p class="text-[11px] text-slate-500" data-i18n="footer_sub">特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介・企業受け入れ支援</p>
             <p class="text-[10px] text-slate-400 pt-2">&copy; 2026 er株式会社 All Rights Reserved.</p>
         </div>
     </footer>
@@ -362,13 +390,18 @@
                 req_target_l3: "日本語レベル：N3目安（N4の方もぜひご相談ください）",
                 req_area_h: "勤務地",
                 req_area_v: "東京・千葉・埼玉・神奈川（首都圏）ほか全国",
+                biz_title: "外国人材をご検討されている企業様へ",
+                biz_desc: "外国人材（特定技能・技能実習修了者）の採用や受け入れ、登録支援機関としてのサポートをご検討されている企業様からのご連絡も心よりお待ちしております。<br>求人票のご相談や面談の設定など、迅速に対応いたします。",
+                biz_note_head: "お問い合わせ方法",
+                biz_note_body: "下記のフォームより、<strong>【応募備考欄】に「企業名」「ご担当者様名」「採用検討の旨」</strong>をご記入の上、ご送信ください。折り返しご連絡いたします。",
+                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> 企業様向けお問い合わせ（フォーム備考欄へ）',
                 cta_btm_title: "あなたにぴったりのお仕事を探します！",
                 cta_btm_desc: "転職の時期や希望給与、住みたい場所など、何でもお気軽にご相談ください。er株式会社がすべて無料でサポートします！",
                 cta_btm_btn: '求職登録・お仕事相談フォームへ進む（1分） <i class="fa-solid fa-chevron-right ml-1"></i>',
                 tag_1: "✔ 引越し費用半額補助",
                 tag_2: "✔ SIM・住所変更支援",
                 tag_3: "✔ ビザ申請サポート",
-                footer_sub: "特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介"
+                footer_sub: "特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介・企業受け入れ支援"
             },
             vi: {
                 header_sub: "Cơ quan hỗ trợ đăng ký / er Co., Ltd.",
@@ -376,7 +409,7 @@
                 hero_badge: "Dành cho người nước ngoài tại Nhật! Chào đón TTS hoàn thành & Tokutei",
                 hero_title_1: "Tư vấn chuyển việc & tìm việc tại Nhật!",
                 hero_title_2: "Nhiều ngành nghề: Kaigo, Nhà xưởng, Ẩm thực...",
-                hero_desc: "Giới thiệu việc làm tại Tokyo và toàn quốc.<br>er Co., Ltd. hỗ trợ 100% chi phí chuyển nhà, SIM thẻ và xin visa!",
+                hero_desc: "Giới thiệu việc làm tại Tokyo và toàn quốc.<br>er Co., Ltd. hỗ trợ chi phí chuyển nhà, SIM thẻ và xin visa!",
                 cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> Đăng ký tìm việc & Nhận tư vấn (Miễn phí)',
                 cta_mid_sub: "※Bạn có thể gửi câu hỏi hoặc thắc mắc. Chúng tôi sẽ tìm công việc phù hợp nhất!",
                 jobs_badge: "ĐA DẠNG NGÀNH NGHỀ",
@@ -420,13 +453,18 @@
                 req_target_l3: "Trình độ tiếng Nhật: N3 (N4 vẫn có thể trao đổi)",
                 req_area_h: "Nơi làm việc",
                 req_area_v: "Tokyo, Chiba, Saitama, Kanagawa và toàn quốc",
+                biz_title: "Dành cho quý doanh nghiệp quan tâm đến nhân lực nước ngoài",
+                biz_desc: "Chúng tôi hoan nghênh quý doanh nghiệp đang tìm kiếm lao động Tokutei Ginou hoặc TTS kỹ năng.<br>Chúng tôi hỗ trợ tuyển dụng, phỏng vấn và thủ tục đăng ký hỗ trợ.",
+                biz_note_head: "Cách thức liên hệ",
+                biz_note_body: "Vui lòng mở form bên dưới và ghi rõ <strong>[Tên công ty], [Người phụ trách], [Nội dung tuyển dụng] vào phần Ghi chú (Notes)</strong>.",
+                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> Liên hệ dành cho doanh nghiệp (Vào phần Ghi chú)',
                 cta_btm_title: "Chúng tôi sẽ tìm công việc phù hợp nhất cho bạn!",
                 cta_btm_desc: "Hãy liên hệ thoải mái về thời gian chuyển việc, mức lương hay địa điểm mong muốn. er Co., Ltd. hỗ trợ hoàn toàn miễn phí!",
                 cta_btm_btn: 'Mở mẫu đăng ký tìm việc (1 phút) <i class="fa-solid fa-chevron-right ml-1"></i>',
                 tag_1: "✔ Trợ cấp 50% chuyển nhà",
                 tag_2: "✔ Hỗ trợ SIM & Đăng ký địa chỉ",
                 tag_3: "✔ Hỗ trợ xin Visa",
-                footer_sub: "Cơ quan hỗ trợ đăng ký / Xin visa / Giới thiệu việc làm"
+                footer_sub: "Cơ quan hỗ trợ đăng ký / Xin visa / Giới thiệu việc làm & Tiếp nhận doanh nghiệp"
             },
             id: {
                 header_sub: "Lembaga Pendukung Terdaftar / er Co., Ltd.",
@@ -478,13 +516,18 @@
                 req_target_l3: "Kemampuan Bahasa: N3 (N4 bisa dikonsultasikan)",
                 req_area_h: "Lokasi Kerja",
                 req_area_v: "Tokyo, Chiba, Saitama, Kanagawa, dan seluruh Jepang",
+                biz_title: "Bagi Perusahaan yang Mempertimbangkan Tenaga Kerja Asing",
+                biz_desc: "Kami menyambut baik perusahaan yang ingin merekrut pekerja berketerampilan khusus (Tokutei Ginou) atau lulusan magang.<br>Kami siap membantu penyediaan kandidat hingga administrasi dukungan.",
+                biz_note_head: "Cara Menghubungi",
+                biz_note_body: "Silakan isi formulir di bawah ini dengan mencantumkan <strong>[Nama Perusahaan], [Nama PIC], dan [Kebutuhan Rekrutmen] di kolom Catatan (Notes)</strong>.",
+                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> Hubungi Kami untuk Perusahaan (Kolom Catatan)',
                 cta_btm_title: "Kami Bantu Carikan Pekerjaan Terbaik untuk Anda!",
                 cta_btm_desc: "Jangan ragu konsultasikan waktu kepindahan, gaji, atau lokasi yang diinginkan. Gratis didukung er Co., Ltd.!",
                 cta_btm_btn: 'Buka Formulir Pendaftaran Kerja (1 Menit) <i class="fa-solid fa-chevron-right ml-1"></i>',
                 tag_1: "✔ Subsidi Pindahan 50%",
                 tag_2: "✔ Bantuan SIM Card & Alamat",
                 tag_3: "✔ Bantuan Pengajuan Visa",
-                footer_sub: "Lembaga Pendukung Terdaftar / Pengurusan Visa / Penyaluran Tenaga Kerja"
+                footer_sub: "Lembaga Pendukung Terdaftar / Pengurusan Visa / Penyaluran Kerja & Rekrutmen Perusahaan"
             },
             my: {
                 header_sub: "မှတ်ပုံတင်ထားသော အထောက်အကူပြုအဖွဲ့အစည်း / er Co., Ltd.",
@@ -536,13 +579,18 @@
                 req_target_l3: "ဂျပန်စာအရည်အချင်း: N3 ဝန်းကျင် (N4 ရှိသူများလည်း တိုင်ပင်နိုင်ပါသည်)",
                 req_area_h: "အလုပ်နေရာ",
                 req_area_v: "တိုကျို၊ ချီဘား၊ ဆိုင်တားမား၊ ခါနာဂါဝါ နှင့် ဂျပန်တစ်ဝှမ်း",
+                biz_title: "နိုင်ငံခြားသားဝန်ထမ်းခေါ်ယူလိုသော လုပ်ငန်းရှင်များအတွက်",
+                biz_desc: "သတ်မှတ်ကျွမ်းကျင်လုပ်သား (SSW) သို့မဟုတ် သင်တန်းသားဟောင်းများကို ခေါ်ယူလိုသော လုပ်ငန်းရှင်များ၏ ဆက်သွယ်မေးမြန်းမှုများကိုလည်း ကြိုဆိုပါသည်။",
+                biz_note_head: "ဆက်သွယ်ရန် နည်းလမ်း",
+                biz_note_body: "အောက်ပါဖောင်ရှိ <strong>မှတ်ချက် (Notes) ကွက်လပ်တွင် [ကုမ္ပဏီအမည်]၊ [တာဝန်ခံအမည်] နှင့် [ခေါ်ယူလိုသည့်အကြောင်းအရာ]</strong> ကို ရေးသားပေးပို့နိုင်ပါသည်။",
+                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> လုပ်ငန်းရှင်များ ဆက်သွယ်ရန် (Notes ကွက်လပ်သို့)',
                 cta_btm_title: "သင့်အတွက် အသင့်တော်ဆုံး အလုပ်ကို ရှာဖွေပေးပါမည်!",
                 cta_btm_desc: "အလုပ်ပြောင်းမည့်အချိန်၊ လစာနှင့် နေထိုင်လိုသောနေရာများကို အခမဲ့ တိုင်ပင်နိုင်ပါသည်။ er Co., Ltd. မှ ကူညီပါမည်။",
                 cta_btm_btn: 'အလုပ်လျှောက်ထားရန် ဖောင်ဖွင့်ပါ (၁ မိနစ်) <i class="fa-solid fa-chevron-right ml-1"></i>',
                 tag_1: "✔ အိမ်ပြောင်းစရိတ် ၅၀% ကူညီငွေ",
                 tag_2: "✔ SIM ကတ်နှင့် လိပ်စာပြောင်းအကူအညီ",
                 tag_3: "✔ ဗီဇာလျှောက်ထားမှု အထောက်အပံ့",
-                footer_sub: "မှတ်ပုံတင်ထားသော အထောက်အကူပြုအဖွဲ့အစည်း / ဗီဇာလျှောက်ထားမှု / အလုပ်အကိုင်ရှာဖွေရေး"
+                footer_sub: "မှတ်ပုံတင်ထားသော အထောက်အကူပြုအဖွဲ့အစည်း / ဗီဇာလျှောက်ထားမှု / လုပ်ငန်းရှင်များလက်ခံရေး"
             },
             ne: {
                 header_sub: "दर्ता गरिएको सहयोग संस्था / er Co., Ltd.",
@@ -594,13 +642,18 @@
                 req_target_l3: "जापानी भाषा: N3 सरह (N4 भएकाहरूले पनि सम्पर्क गर्न सक्नुहुन्छ)",
                 req_area_h: "कार्यस्थल",
                 req_area_v: "टोकियो, चिबा, साइतामा, कानागावा र जापानभरि",
+                biz_title: "विदेशी कामदार भर्ती गर्न चाहने कम्पनीहरूका लागि",
+                biz_desc: "तोकुतेई गिनौ (SSW) वा प्रशिक्षार्थीहरू भर्ती गर्न इच्छुक कम्पनीहरूको सम्पर्कलाई हामी स्वागत गर्दछौं।",
+                biz_note_head: "सम्पर्क गर्ने तरिका",
+                biz_note_body: "तलको फारममा <strong>टिप्पणी (Notes) सेक्सनमा [कम्पनीको नाम], [सम्पर्क व्यक्ति], र [भर्ती आवश्यकता]</strong> उल्लेख गरी पठाउनुहोस्।",
+                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> कम्पनीहरूको सोधपुछका लागि (Notes सेक्सनमा)',
                 cta_btm_title: "हामी तपाईंको लागि उपयुक्त काम खोजिदिनेछौं!",
                 cta_btm_desc: "काम परिवर्तन गर्ने समय, तलब वा ठाउँको बारेमा निसंकोच सल्लाह लिनुहोस्। er Co., Ltd. को सम्पूर्ण सेवा निःशुल्क छ!",
                 cta_btm_btn: 'फारम भरेर सम्पर्क गर्नुहोस् (१ मिनेट) <i class="fa-solid fa-chevron-right ml-1"></i>',
                 tag_1: "✔ कोठा सर्ने ५०% सहयोग",
                 tag_2: "✔ SIM र ठेगाना दर्ता सहयोग",
                 tag_3: "✔ भिसा आवेदन सहयोग",
-                footer_sub: "दर्ता गरिएको सहयोग संस्था / भिसा आवेदन / रोजगार परामर्श"
+                footer_sub: "दर्ता गरिएको सहयोग संस्था / भिसा आवेदन / रोजगार परामर्श र कम्पनी सहयोग"
             }
         };
 
