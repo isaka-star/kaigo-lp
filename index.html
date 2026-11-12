@@ -10,8 +10,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        erBlue: '#499fd6',       /* erロゴのスカイブルー */
+                        erPink: '#c4217f',       /* er+ロゴのマゼンタピンク */
+                        erRed: '#d62828',        /* er groupのレッド */
+                        erGray: '#666666',       /* er groupのグレー */
+                        erDark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -25,13 +40,13 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-emerald-50/40 via-white to-slate-50 text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
     <!-- 固定ヘッダー -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-emerald-100 shadow-sm">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
         <div class="max-w-xl mx-auto px-4 h-16 flex items-center justify-between gap-2">
             <div class="flex items-center gap-2 shrink-0">
-                <img src="erロゴ.png" alt="株式会社er ロゴ" class="h-5 sm:h-6 w-auto object-contain shrink-0" onerror="this.style.display='none'">
+                <img src="erロゴ.png" alt="株式会社er ロゴ" class="h-6 w-auto object-contain shrink-0" onerror="this.style.display='none'">
                 <div>
                     <span class="font-black text-slate-800 text-xs sm:text-sm tracking-tight block">株式会社er</span>
                     <span class="text-[9px] text-slate-500 block leading-none" data-i18n="header_sub">登録支援機関 / 外国人材支援</span>
@@ -40,35 +55,36 @@
 
             <!-- 言語切り替えドロップダウン -->
             <div class="flex items-center gap-1.5">
-                <i class="fa-solid fa-globe text-emerald-600 text-xs"></i>
-                <select id="lang-select" onchange="changeLanguage(this.value)" class="text-xs bg-emerald-50 border border-emerald-200 text-slate-700 font-bold py-1.5 px-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm">
+                <i class="fa-solid fa-globe text-erBlue text-xs"></i>
+                <select id="lang-select" onchange="changeLanguage(this.value)" class="text-xs bg-slate-100 border border-slate-300 text-slate-700 font-bold py-1.5 px-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-erBlue shadow-sm">
                     <option value="ja">日本語</option>
                     <option value="vi">Tiếng Việt</option>
                     <option value="id">Indonesia</option>
                     <option value="my">မြန်မာ</option>
                     <option value="ne">नेपाली</option>
                 </select>
-                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] sm:text-xs font-bold px-3 py-2 rounded-full shadow transition shrink-0" data-i18n="header_btn">
+                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bg-erBlue hover:bg-sky-600 text-white text-[11px] sm:text-xs font-bold px-3 py-2 rounded-full shadow transition shrink-0" data-i18n="header_btn">
                     相談する 💬
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- ヒーローセクション -->
-    <section class="pt-20 pb-10 px-4 bg-gradient-to-b from-emerald-700 via-teal-800 to-slate-900 text-white text-center rounded-b-[2.5rem] shadow-xl relative overflow-hidden">
-        <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
-        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-400/10 rounded-full blur-2xl"></div>
+    <!-- ヒーローセクション（erブランドカラーグラデーション） -->
+    <section class="pt-20 pb-10 px-4 bg-gradient-to-b from-[#1b2b40] via-[#243b55] to-slate-900 text-white text-center rounded-b-[2.5rem] shadow-xl relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-44 h-44 bg-erBlue/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-10 -right-10 w-44 h-44 bg-erPink/20 rounded-full blur-3xl"></div>
 
         <div class="max-w-md mx-auto relative z-10">
-            <span class="bg-amber-400 text-slate-900 text-[10px] sm:text-xs font-black px-4 py-1.5 rounded-full inline-block mb-3 shadow-md tracking-wider" data-i18n="hero_badge">
+            <!-- ピンク×ブルーアクセントバッジ -->
+            <span class="bg-gradient-to-r from-erPink to-rose-600 text-white text-[10px] sm:text-xs font-black px-4 py-1.5 rounded-full inline-block mb-3 shadow-md tracking-wider" data-i18n="hero_badge">
                 【日本国内にいる方へ】特定技能・実習修了者 歓迎！
             </span>
             <h1 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug mb-3">
                 <span data-i18n="hero_title_1">日本での転職・お仕事相談！</span><br>
-                <span class="text-amber-300" data-i18n="hero_title_2">介護・製造・飲食など様々なお仕事</span>
+                <span class="text-sky-300" data-i18n="hero_title_2">介護・製造・飲食など様々なお仕事</span>
             </h1>
-            <p class="text-emerald-100 text-xs sm:text-sm leading-relaxed mb-5 opacity-90" data-i18n="hero_desc">
+            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-5 opacity-90" data-i18n="hero_desc">
                 東京・首都圏をはじめ全国の求人をご紹介。<br>
                 株式会社erが「引越・SIM契約・ビザ手続き」をすべて支援します！
             </p>
@@ -80,10 +96,10 @@
 
             <!-- 中ごろのコンタクトボタン -->
             <div class="space-y-2 mt-4">
-                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95" data-i18n="cta_mid_btn">
+                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-erBlue to-sky-600 hover:from-sky-500 hover:to-sky-700 text-white font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-sky-800 transform active:scale-95" data-i18n="cta_mid_btn">
                     <i class="fa-solid fa-comments mr-1.5 text-lg"></i> まずは希望を登録・相談してみる（無料）
                 </a>
-                <p class="text-[10px] text-amber-200" data-i18n="cta_mid_sub">※気になることの質問だけでもOK！あなたの希望に合うお仕事を探します</p>
+                <p class="text-[10px] text-sky-200" data-i18n="cta_mid_sub">※気になることの質問だけでもOK！あなたの希望に合うお仕事を探します</p>
             </div>
         </div>
     </section>
@@ -91,9 +107,9 @@
     <!-- 色々なお仕事ご紹介セクション -->
     <section class="py-10 px-5 max-w-md mx-auto">
         <div class="text-center mb-6">
-            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="jobs_badge">WIDE RANGE OF JOBS</span>
+            <span class="text-xs font-bold text-erBlue bg-sky-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="jobs_badge">WIDE RANGE OF JOBS</span>
             <h2 class="font-black text-slate-800 text-xl flex items-center justify-center gap-2">
-                <span class="text-emerald-500">✦</span> <span data-i18n="jobs_title">介護のほかにも、様々なお仕事をご紹介！</span>
+                <span class="text-erBlue">✦</span> <span data-i18n="jobs_title">介護のほかにも、様々なお仕事をご紹介！</span>
             </h2>
             <p class="text-slate-500 text-xs mt-1" data-i18n="jobs_desc">
                 あなたの資格・経験・希望に合わせてぴったりのお仕事をご案内します。
@@ -101,23 +117,23 @@
         </div>
 
         <div class="grid grid-cols-2 gap-3 text-center">
-            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="text-2xl text-emerald-600 mb-1"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-erBlue transition">
+                <div class="text-2xl text-erPink mb-1"><i class="fa-solid fa-hand-holding-heart"></i></div>
                 <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_1_title">介護（かいご）</h3>
                 <p class="text-[10px] text-slate-500" data-i18n="job_1_desc">月給23万円〜・手当充実</p>
             </div>
-            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="text-2xl text-blue-600 mb-1"><i class="fa-solid fa-industry"></i></div>
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-erBlue transition">
+                <div class="text-2xl text-erBlue mb-1"><i class="fa-solid fa-industry"></i></div>
                 <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_2_title">工場・製造（せいぞう）</h3>
                 <p class="text-[10px] text-slate-500" data-i18n="job_2_desc">食品加工・機械オペレーターなど</p>
             </div>
-            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="text-2xl text-amber-600 mb-1"><i class="fa-solid fa-utensils"></i></div>
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-erBlue transition">
+                <div class="text-2xl text-amber-500 mb-1"><i class="fa-solid fa-utensils"></i></div>
                 <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_3_title">外食・飲食（いんしょく）</h3>
                 <p class="text-[10px] text-slate-500" data-i18n="job_3_desc">レストラン・調理補助・接客</p>
             </div>
-            <div class="bg-white p-3.5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="text-2xl text-teal-600 mb-1"><i class="fa-solid fa-hotel"></i></div>
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-erBlue transition">
+                <div class="text-2xl text-erRed mb-1"><i class="fa-solid fa-hotel"></i></div>
                 <h3 class="font-extrabold text-xs text-slate-800" data-i18n="job_4_title">宿泊・ホテル</h3>
                 <p class="text-[10px] text-slate-500" data-i18n="job_4_desc">フロント・客室管理など</p>
             </div>
@@ -127,9 +143,9 @@
     <!-- 3大安心サポート -->
     <section class="py-10 px-5 max-w-md mx-auto">
         <div class="text-center mb-6">
-            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="support_badge">er SUPPORT</span>
+            <span class="text-xs font-bold text-erPink bg-pink-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="support_badge">er SUPPORT</span>
             <h2 class="font-black text-slate-800 text-xl flex items-center justify-center gap-2">
-                <span class="text-emerald-500">★</span> <span data-i18n="support_title">株式会社erの3大サポート</span>
+                <span class="text-erBlue">★</span> <span data-i18n="support_title">株式会社erの3大サポート</span>
             </h2>
             <p class="text-slate-500 text-xs mt-1" data-i18n="support_desc">
                 地方からの引っ越しやビザの変更も安心です。
@@ -137,8 +153,8 @@
         </div>
 
         <div class="space-y-4">
-            <div class="bg-white p-5 rounded-3xl border border-emerald-100 shadow-sm flex gap-4 items-start">
-                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
+            <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm flex gap-4 items-start relative overflow-hidden">
+                <div class="w-12 h-12 bg-sky-50 text-erBlue rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
                     <i class="fa-solid fa-truck-moving"></i>
                 </div>
                 <div>
@@ -151,8 +167,8 @@
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-3xl border border-emerald-100 shadow-sm flex gap-4 items-start">
-                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
+            <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm flex gap-4 items-start relative overflow-hidden">
+                <div class="w-12 h-12 bg-pink-50 text-erPink rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
                 <div>
@@ -165,8 +181,8 @@
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-3xl border border-emerald-100 shadow-sm flex gap-4 items-start">
-                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
+            <div class="bg-white p-5 rounded-3xl border border-slate-200/80 shadow-sm flex gap-4 items-start relative overflow-hidden">
+                <div class="w-12 h-12 bg-slate-100 text-erGray rounded-2xl flex items-center justify-center text-xl font-bold shrink-0">
                     <i class="fa-solid fa-passport"></i>
                 </div>
                 <div>
@@ -182,9 +198,9 @@
     </section>
 
     <!-- 求人PRショート動画セクション -->
-    <section class="py-12 px-4 bg-slate-900 text-white rounded-[2.5rem] shadow-inner max-w-xl mx-auto">
+    <section class="py-12 px-4 bg-[#1e293b] text-white rounded-[2.5rem] shadow-inner max-w-xl mx-auto">
         <div class="text-center mb-6">
-            <span class="text-[10px] font-bold text-amber-300 bg-amber-400/15 border border-amber-400/25 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="movie_badge">JOB MOVIE</span>
+            <span class="text-[10px] font-bold text-sky-300 bg-erBlue/20 border border-erBlue/40 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="movie_badge">JOB MOVIE</span>
             <h2 class="font-black text-xl flex items-center justify-center gap-2">
                 🎬 <span data-i18n="movie_title">注目の求人案件PR動画</span>
             </h2>
@@ -225,10 +241,10 @@
     </section>
 
     <!-- 募集条件 -->
-    <section class="py-10 px-5 bg-white border-y border-slate-200/60 shadow-sm">
+    <section class="py-10 px-5 bg-white border-y border-slate-200/80 shadow-sm">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-6">
-                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="req_badge">REQUIREMENTS</span>
+                <span class="text-xs font-bold text-erBlue bg-sky-50 px-3 py-1 rounded-full inline-block mb-1.5 uppercase tracking-widest" data-i18n="req_badge">REQUIREMENTS</span>
                 <h2 class="font-black text-slate-800 text-lg flex items-center justify-center gap-2">
                     ● <span data-i18n="req_title">募集概要</span>
                 </h2>
@@ -236,22 +252,22 @@
 
             <div class="space-y-3.5 text-xs sm:text-sm">
                 <div class="flex border-b border-slate-100 pb-3 gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_job_h">ご紹介職種</span>
+                    <span class="font-extrabold text-slate-600 w-28 shrink-0" data-i18n="req_job_h">ご紹介職種</span>
                     <div class="text-slate-800">
                         <p class="font-bold" data-i18n="req_job_v">介護職（特定技能）、製造、飲食、宿泊など</p>
                     </div>
                 </div>
 
                 <div class="flex border-b border-slate-100 pb-3 gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_pay_h">給与の目安</span>
+                    <span class="font-extrabold text-slate-600 w-28 shrink-0" data-i18n="req_pay_h">給与の目安</span>
                     <div class="text-slate-800 font-bold">
-                        <p class="text-emerald-700 text-base font-black" data-i18n="req_pay_v">月給 230,000円〜（介護職例）</p>
+                        <p class="text-erBlue text-base font-black" data-i18n="req_pay_v">月給 230,000円〜（介護職例）</p>
                         <p class="text-slate-500 text-[10px] mt-0.5 font-normal" data-i18n="req_pay_sub">※職種・勤務地・経験によって異なります</p>
                     </div>
                 </div>
 
                 <div class="flex border-b border-slate-100 pb-3 gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_target_h">対象となる方</span>
+                    <span class="font-extrabold text-slate-600 w-28 shrink-0" data-i18n="req_target_h">対象となる方</span>
                     <div class="text-slate-800 space-y-1">
                         <p class="font-bold" data-i18n="req_target_v1">日本国内に在留している外国人の方</p>
                         <ul class="list-disc list-inside text-slate-600 text-xs space-y-0.5">
@@ -263,7 +279,7 @@
                 </div>
 
                 <div class="flex gap-3 items-start">
-                    <span class="font-extrabold text-emerald-700 w-28 shrink-0" data-i18n="req_area_h">勤務地</span>
+                    <span class="font-extrabold text-slate-600 w-28 shrink-0" data-i18n="req_area_h">勤務地</span>
                     <div class="text-slate-800 font-medium">
                         <p data-i18n="req_area_v">東京・千葉・埼玉・神奈川（首都圏）ほか全国</p>
                     </div>
@@ -272,11 +288,11 @@
         </div>
     </section>
 
-    <!-- 外国人材をご検討されている企業様向けセクション -->
+    <!-- 外国人材をご検討されている企業様向けセクション（ダークグレー×レッドアクセント） -->
     <section class="py-10 px-5 max-w-md mx-auto">
-        <div class="bg-gradient-to-br from-slate-800 to-slate-900 text-white p-6 rounded-3xl border border-slate-700 shadow-xl relative overflow-hidden">
+        <div class="bg-gradient-to-br from-[#2b3544] to-[#1c2430] text-white p-6 rounded-3xl border border-slate-700 shadow-xl relative overflow-hidden">
             <div class="flex items-center gap-2 mb-2">
-                <span class="bg-emerald-500 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">For Business</span>
+                <span class="bg-erRed text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">For Business</span>
                 <span class="text-xs font-bold text-slate-300">受け入れ企業様へ</span>
             </div>
             
@@ -289,7 +305,7 @@
             </p>
 
             <div class="bg-white/10 backdrop-blur-sm p-3.5 rounded-2xl border border-white/10 mb-4 text-xs space-y-1">
-                <p class="font-bold text-amber-300 flex items-center gap-1.5">
+                <p class="font-bold text-sky-300 flex items-center gap-1.5">
                     <i class="fa-solid fa-circle-info"></i> <span data-i18n="biz_note_head">お問い合わせ方法</span>
                 </p>
                 <p class="text-slate-200 text-[11px] leading-relaxed" data-i18n="biz_note_body">
@@ -305,8 +321,8 @@
 
     <!-- 最下部のコンタクトボタン -->
     <section class="py-10 px-5 max-w-md mx-auto text-center">
-        <div class="bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 text-white p-6 rounded-3xl border border-emerald-100 shadow-2xl relative overflow-hidden">
-            <div class="w-16 h-16 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-md">
+        <div class="bg-gradient-to-br from-[#1b2b40] via-[#243b55] to-slate-900 text-white p-6 rounded-3xl border border-slate-700 shadow-2xl relative overflow-hidden">
+            <div class="w-16 h-16 bg-gradient-to-tr from-erBlue to-sky-400 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-md">
                 <i class="fa-solid fa-headset"></i>
             </div>
             <h3 class="font-black text-white text-lg mb-2" data-i18n="cta_btm_title">あなたにぴったりのお仕事を探します！</h3>
@@ -315,11 +331,11 @@
             </p>
             
             <div class="space-y-2.5">
-                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-900 font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-orange-600 transform active:scale-95" data-i18n="cta_btm_btn">
+                <a href="https://forms.gle/dsUpA8pAefauSMav5" target="_blank" class="bounce-btn block w-full py-4.5 bg-gradient-to-r from-erBlue to-sky-600 hover:from-sky-500 hover:to-sky-700 text-white font-black rounded-3xl shadow-lg transition text-base text-center border-b-4 border-sky-800 transform active:scale-95" data-i18n="cta_btm_btn">
                     求職登録・お仕事相談フォームへ進む（1分） <i class="fa-solid fa-chevron-right ml-1"></i>
                 </a>
                 
-                <div class="flex justify-center gap-3 text-[10px] text-amber-200 mt-2">
+                <div class="flex justify-center gap-3 text-[10px] text-sky-200 mt-2">
                     <span data-i18n="tag_1">✔ 引越し費用半額補助</span>
                     <span data-i18n="tag_2">✔ SIM・住所変更支援</span>
                     <span data-i18n="tag_3">✔ ビザ申請サポート</span>
@@ -330,9 +346,9 @@
 
     <!-- フッター -->
     <footer class="py-8 text-center text-xs text-slate-400 border-t border-slate-200 bg-white px-4">
-        <div class="max-w-md mx-auto space-y-1.5">
-            <div class="flex items-center justify-center gap-1.5">
-                <img src="erロゴ.png" alt="株式会社er ロゴ" class="h-4 sm:h-5 w-auto object-contain shrink-0" onerror="this.style.display='none'">
+        <div class="max-w-md mx-auto space-y-2">
+            <div class="flex items-center justify-center gap-2">
+                <img src="erロゴ.png" alt="株式会社er ロゴ" class="h-5 w-auto object-contain shrink-0" onerror="this.style.display='none'">
                 <p class="font-black text-slate-700 text-sm">株式会社er（登録支援機関）</p>
             </div>
             <p class="text-[11px] text-slate-500" data-i18n="footer_sub">特定技能外国人就労支援 / 在留資格申請サポート / 求人紹介・企業受け入れ支援</p>
@@ -551,126 +567,4 @@
                 job_3_title: "စားသောက်ဆိုင် / အစားအစာဝန်ဆောင်မှု",
                 job_3_desc: "မီးဖိုချောင်၊ စားသောက်ဆိုင်ဝန်ဆောင်မှု",
                 job_4_title: "ဟိုတယ် / တည်းခိုခန်း",
-                job_4_desc: "ဧည့်ကြို၊ အခန်းထိန်းသိမ်းရေး စသည်",
-                support_badge: "er ၏ အကူအညီများ",
-                support_title: "株式会社er ၏ အဓိက အကူအညီ ၃ ခု",
-                support_desc: "နယ်မြို့များမှ တိုကျိုသို့ ပြောင်းရွှေ့အလုပ်လုပ်ကိုင်ခြင်းအတွက် စိတ်ချနိုင်ပါသည်။",
-                sup_1_title: "အိမ်ပြောင်းစရိတ် ကုမ္ပဏီမှ ၅၀% ထောက်ပံ့ပေးခြင်း",
-                sup_1_desc: "နယ်မှ တိုကျိုသို့ ပြောင်းရွှေ့စရိတ်ကို ကုမ္ပဏီက ထက်ဝက်ကျခံပေးသဖြင့် ကုန်ကျစရိတ် သက်သာစေပါသည်။",
-                sup_2_title: "SIM ကတ်နှင့် လိပ်စာပြောင်းလဲခြင်း အကူအညီ",
-                sup_2_desc: "SIM ကတ်လျှောက်ထားခြင်းနှင့် မြို့နယ်ရုံးများတွင် လိပ်စာတင်ခြင်းများကို တာဝန်ရှိသူများက ကူညီပေးပါမည်။",
-                sup_3_title: "သတ်မှတ်ကျွမ်းကျင်ဗီဇာ (SSW) လျှောက်ထားမှု အကူအညီ",
-                sup_3_desc: "株式会社er မှ ဗီဇာပြောင်းလဲခြင်းနှင့် သက်တမ်းတိုးခြင်း စာရွက်စာတမ်းများကို အစအဆုံး ကူညီဆောင်ရွက်ပေးပါသည်။",
-                movie_badge: "အလုပ်အကိုင် ဗီဒီယို",
-                movie_title: "စိတ်ဝင်စားဖွယ် အလုပ်အကိုင် ဗီဒီယိုတိုများ",
-                movie_desc: "အလုပ်နေရာများနှင့် လုပ်ငန်းခွင်အခြေအနေ ဗီဒီယိုများဖြစ်ပါသည်။ ဘေးသို့ရွှေ့၍ ကြည့်ရှုနိုင်ပါသည် 👉",
-                video_1_label: "🎬 Kaigo အလုပ်အကိုင် ဗီဒီယိုတို",
-                video_2_label: "📍 တိုကျို မီနာတိုခရိုင် အလုပ်အကိုင်",
-                video_3_label: "✨ ထူးခြားအလုပ်အကိုင်များ",
-                movie_tap_note: "※အသံဖွင့်ရန် ဗီဒီယိုကို နှိပ်ပါ",
-                req_badge: "လိုအပ်ချက်များ",
-                req_title: "ခေါ်ယူမှု အနှစ်ချုပ်",
-                req_job_h: "မိတ်ဆက်ပေးမည့်အလုပ်",
-                req_job_v: "ဘိုးဘွားရိပ်သာ (Kaigo)၊ စက်ရုံ၊ စားသောက်ဆိုင်၊ ဟိုတယ် စသည်",
-                req_pay_h: "ခန့်မှန်းလစာ",
-                req_pay_v: "လစာ ယန်း ၂၃၀,၀၀၀ မှ (Kaigo နမူနာ)",
-                req_pay_sub: "※အလုပ်အကိုင်၊ နေရာနှင့် အတွေ့အကြုံပေါ်မူတည်၍ ကွာခြားနိုင်ပါသည်",
-                req_target_h: "လျှောက်ထားနိုင်သူများ",
-                req_target_v1: "ဂျပန်နိုင်ငံအတွင်း နေထိုင်နေသော နိုင်ငံခြားသားများ",
-                req_target_l1: "သတ်မှတ်ကျွမ်းကျင်လုပ်သား ဗီဇာရှိသူ သို့မဟုတ် ပြောင်းလဲမည့်သူ",
-                req_target_l2: "ကျွမ်းကျင်သင်တန်းပြီးဆုံးသူ သို့မဟုတ် ပြီးဆုံးတော့မည့်သူ",
-                req_target_l3: "ဂျပန်စာအရည်အချင်း: N3 ဝန်းကျင် (N4 ရှိသူများလည်း တိုင်ပင်နိုင်ပါသည်)",
-                req_area_h: "အလုပ်နေရာ",
-                req_area_v: "တိုကျို၊ ချီဘား၊ ဆိုင်တားမား၊ ခါနာဂါဝါ နှင့် ဂျပန်တစ်ဝှမ်း",
-                biz_title: "နိုင်ငံခြားသားဝန်ထမ်းခေါ်ယူလိုသော လုပ်ငန်းရှင်များအတွက်",
-                biz_desc: "သတ်မှတ်ကျွမ်းကျင်လုပ်သား (SSW) သို့မဟုတ် သင်တန်းသားဟောင်းများကို ခေါ်ယူလိုသော လုပ်ငန်းရှင်များ၏ ဆက်သွယ်မေးမြန်းမှုများကိုလည်း ကြိုဆိုပါသည်။",
-                biz_note_head: "ဆက်သွယ်ရန် နည်းလမ်း",
-                biz_note_body: "အောက်ပါဖောင်ရှိ <strong>မှတ်ချက် (Notes) ကွက်လပ်တွင် [ကုမ္ပဏီအမည်]၊ [တာဝန်ခံအမည်] နှင့် [ခေါ်ယူလိုသည့်အကြောင်းအရာ]</strong> ကို ရေးသားပေးပို့နိုင်ပါသည်။",
-                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> လုပ်ငန်းရှင်များ ဆက်သွယ်ရန် (Notes ကွက်လပ်သို့)',
-                cta_btm_title: "သင့်အတွက် အသင့်တော်ဆုံး အလုပ်ကို ရှာဖွေပေးပါမည်!",
-                cta_btm_desc: "အလုပ်ပြောင်းမည့်အချိန်၊ လစာနှင့် နေထိုင်လိုသောနေရာများကို အခမဲ့ တိုင်ပင်နိုင်ပါသည်။ 株式会社er မှ ကူညီပါမည်။",
-                cta_btm_btn: 'အလုပ်လျှောက်ထားရန် ဖောင်ဖွင့်ပါ (၁ မိနစ်) <i class="fa-solid fa-chevron-right ml-1"></i>',
-                tag_1: "✔ အိမ်ပြောင်းစရိတ် ၅၀% ကူညီငွေ",
-                tag_2: "✔ SIM ကတ်နှင့် လိပ်စာပြောင်းအကူအညီ",
-                tag_3: "✔ ဗီဇာလျှောက်ထားမှု အထောက်အပံ့",
-                footer_sub: "မှတ်ပုံတင်ထားသော အထောက်အကူပြုအဖွဲ့အစည်း / ဗီဇာလျှောက်ထားမှု / လုပ်ငန်းရှင်များလက်ခံရေး"
-            },
-            ne: {
-                header_sub: "दर्ता गरिएको सहयोग संस्था / 株式会社er",
-                header_btn: "परामर्श 💬",
-                hero_badge: "जापानमा रहनुभएका विदेशीहरूका लागि (SSW र प्रशिक्षार्थीहरू स्वागत छ)",
-                hero_title_1: "जापानमा जागिर परिवर्तन र कामको परामर्श!",
-                hero_title_2: "केयरगिभर, फ्याक्ट्री, रेस्टुरेन्ट आदि विभिन्न कामहरू",
-                hero_desc: "टोकियो र जापानभरिका कामहरूको जानकारी उपलब्ध गराइन्छ।<br>株式会社er ले कोठा सर्न, SIM कार्ड र भिसा प्रक्रियामा पूर्ण सहयोग गर्दछ!",
-                cta_mid_btn: '<i class="fa-solid fa-comments mr-1.5 text-lg"></i> जागिर दर्ता र निःशुल्क परामर्श गर्नुहोस्',
-                cta_mid_sub: "※सोधपुछ मात्र गर्न पनि सकिन्छ! हामी तपाईंको इच्छा अनुसारको काम खोज्नेछौं।",
-                jobs_badge: "कामको विविधता",
-                jobs_title: "केयरगिभर (Kaigo) बाहेक अन्य धेरै कामहरू पनि उपलब्ध छन्!",
-                jobs_desc: "तपाईंको योग्यता, अनुभव र इच्छा अनुसार उपयुक्त कामको व्यवस्था गर्दछौं।",
-                job_1_title: "केयरगिभर (Kaigo)",
-                job_1_desc: "मासिक तलब २३०,००० येन बाट सुरु",
-                job_2_title: "कारखाना / उत्पादन",
-                job_2_desc: "खाना प्याकिङ, मेसिन सञ्चालन आदि",
-                job_3_title: "रेस्टुरेन्ट / खाना सेवा",
-                job_3_desc: "किचन, वेटर, ग्राहक सेवा",
-                job_4_title: "होटल / आतिथ्य",
-                job_4_desc: "फ्रन्ट डेस्क, रुम व्यवस्थापन आदि",
-                support_badge: "er को सहयोगहरू",
-                support_title: "株式会社er का ३ प्रमुख सहयोगहरू",
-                support_desc: "ग्रामीण क्षेत्रबाट टोकियो सरेर ढुक्कसँग काम गर्न सकिन्छ।",
-                sup_1_title: "कोठा सर्ने खर्च ५०% कम्पनीले बेहोर्ने!",
-                sup_1_desc: "अन्य क्षेत्रबाट टोकियो सर्दा लाग्ने खर्चको आधा कम्पनीले सहयोग गर्छ, जसले आर्थिक भार कम गर्छ।",
-                sup_2_title: "SIM कार्ड र ठेगाना दर्ता सहयोग",
-                sup_2_desc: "SIM कार्ड सम्झौता र सरकारी कार्यालयमा ठेगाना दर्ता गर्न हाम्रा कर्मचारीहरूले सघाउनेछन्।",
-                sup_3_title: "भिसा (SSW) आवेदन प्रक्रिया सहयोग",
-                sup_3_desc: "株式会社er ले तोकुतेई गिनौ (SSW) भिसा परिवर्तन र कागजात तयार गर्न पूर्ण मद्दत गर्दछ।",
-                movie_badge: "कामको भिडियो",
-                movie_title: "काम र कार्यस्थलको भिडियो हेर्नुहोस्",
-                movie_desc: "वास्तविक काम र सुविधाको जानकारी भिडियो। दायाँ/बायाँ सारेर हेर्नुहोस् 👉",
-                video_1_label: "🎬 Kaigo कामको भिडियो",
-                video_2_label: "📍 टोकियो मिनातो-कु भर्ना",
-                video_3_label: "✨ मुख्य कामहरूको जानकारी",
-                movie_tap_note: "※आवाज खोल्न भिडियोमा ट्याप गर्नुहोस्",
-                req_badge: "आवश्यकताहरू",
-                req_title: "भर्ना विवरण",
-                req_job_h: "कामका क्षेत्रहरू",
-                req_job_v: "केयरगिभर (Kaigo), फ्याक्ट्री, रेस्टुरेन्ट, होटल आदि",
-                req_pay_h: "अनुमानित तलब",
-                req_pay_v: "मासिक २३०,००० येन बाट (Kaigo उदाहरण)",
-                req_pay_sub: "※कामको प्रकार, स्थान र अनुभव अनुसार फरक हुन सक्छ",
-                req_target_h: "योग्य उम्मेदवार",
-                req_target_v1: "जापानमा बसोबास गरिरहेका विदेशी नागरिकहरू",
-                req_target_l1: "SSW भिसा भएका वा परिवर्तन गर्न चाहनेहरू",
-                req_target_l2: "प्रशिक्षार्थी (Trainee) पूरा गरेका वा गर्न लागेकाहरू",
-                req_target_l3: "जापानी भाषा: N3 सरह (N4 भएकाहरूले पनि सम्पर्क गर्न सक्नुहुन्छ)",
-                req_area_h: "कार्यस्थल",
-                req_area_v: "टोकियो, चिबा, साइतामा, कानागावा र जापानभरि",
-                biz_title: "विदेशी कामदार भर्ती गर्न चाहने कम्पनीहरूका लागि",
-                biz_desc: "तोकुतेई गिनौ (SSW) वा प्रशिक्षार्थीहरू भर्ती गर्न इच्छुक कम्पनीहरूको सम्पर्कलाई हामी स्वागत गर्दछौं।",
-                biz_note_head: "सम्पर्क गर्ने तरिका",
-                biz_note_body: "तलको फारममा <strong>टिप्पणी (Notes) सेक्सनमा [कम्पनीको नाम], [सम्पर्क व्यक्ति], र [भर्ती आवश्यकता]</strong> उल्लेख गरी पठाउनुहोस्।",
-                biz_btn: '<i class="fa-solid fa-envelope mr-1.5"></i> कम्पनीहरूको सोधपुछका लागि (Notes सेक्सनमा)',
-                cta_btm_title: "हामी तपाईंको लागि उपयुक्त काम खोजिदिनेछौं!",
-                cta_btm_desc: "काम परिवर्तन गर्ने समय, तलब वा ठाउँको बारेमा निसंकोच सल्लाह लिनुहोस्। 株式会社er को सम्पूर्ण सेवा निःशुल्क छ!",
-                cta_btm_btn: 'फारम भरेर सम्पर्क गर्नुहोस् (१ मिनेट) <i class="fa-solid fa-chevron-right ml-1"></i>',
-                tag_1: "✔ कोठा सर्ने ५०% सहयोग",
-                tag_2: "✔ SIM र ठेगाना दर्ता सहयोग",
-                tag_3: "✔ भिसा आवेदन सहयोग",
-                footer_sub: "दर्ता गरिएको सहयोग संस्था / भिसा आवेदन / रोजगार परामर्श र कम्पनी सहयोग"
-            }
-        };
-
-        function changeLanguage(lang) {
-            const data = i18nData[lang] || i18nData.ja;
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (data[key]) {
-                    el.innerHTML = data[key];
-                }
-            });
-            document.documentElement.lang = lang;
-        }
-    </script>
-
-</body>
-</html>
+                job_4_desc: "ဧည့်ကြို၊ အခန်းထိန်းသိမ်းရေး
